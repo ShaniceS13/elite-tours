@@ -1,8 +1,12 @@
 import "./styles/global.css";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+
 function App() {
   return (
     <div>
-      <h1>EliTe Tours</h1>
+      <Navbar />
+      <Hero />
     </div>
   );
 }
