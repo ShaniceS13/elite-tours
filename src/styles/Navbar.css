@@ -1,3 +1,4 @@
+/* ── Base Styles ── */
 .navbar {
   position: fixed;
   top: 0;
@@ -30,8 +31,9 @@
   z-index: 1;
 }
 
+/* ── Logo ── */
 .nav-logo {
-  font-family: "Comorant Garamond", serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 26px;
   font-weight: 600;
   color: var(--white);
@@ -43,6 +45,7 @@
   color: var(--gold-light);
 }
 
+/* ── Nav Links ── */
 .nav-links {
   display: flex;
   gap: 36px;
@@ -63,6 +66,7 @@
   color: var(--gold-light);
 }
 
+/* ── Book Now Button ── */
 .nav-cta {
   background: var(--teal) !important;
   color: var(--white) !important;
@@ -72,15 +76,87 @@
 }
 
 .nav-cta:hover {
-  background: var(teal-light);
+  background: var(--teal-light) !important;
 }
 
-@media (max-width: 768px) {
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Tablet ── */
+@media (max-width: 900px) {
   .nav-links {
-    display: none;
+    gap: 16px;
   }
 
+  .nav-links a {
+    font-size: 11px;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
   .nav-logo {
     font-size: 22px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: var(--nav-h);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: rgba(13, 82, 71, 0.97);
+    padding: 32px 5%;
+    gap: 24px;
+    z-index: 99;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .nav-cta {
+    text-align: center;
+    padding: 14px 20px !important;
   }
 }
