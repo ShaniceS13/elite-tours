@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Fleet from "./components/Fleet";
 import WhyELite from "./components/WhyElite";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Fleet />
       <WhyELite />
+      <Gallery />
     </div>
   );
 }
