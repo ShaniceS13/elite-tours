@@ -15,6 +15,30 @@ export default function Gallery() {
       alt: "Paddle boarding Roatan",
     },
     {
+      src: "/images/sloth-1.png",
+      alt: "Sloth at sanctuary",
+    },
+    {
+      src: "/images/sloth-2.png",
+      alt: "Smiling sloth",
+    },
+    {
+      src: "/images/monkey-1.png",
+      alt: "Monkeys at the sanctuary",
+    },
+    {
+      src: "/images/monkey-2.png",
+      alt: "Monkeys at the sanctuary",
+    },
+    {
+      src: "/images/monkey-3.png",
+      alt: "Capuchin monkey",
+    },
+    {
+      src: "/images/i-love-roatan.png",
+      alt: "I love Roatan beach",
+    },
+    {
       src: "/images/roatan-sign.jpg",
       alt: "Roatan sign blue sky",
     },
