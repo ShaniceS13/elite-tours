@@ -1,0 +1,54 @@
+/* - Why Section - */
+.why {
+  background: var(--sand);
+  padding: 100px 5%;
+}
+
+/* - Grid - */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* - Item - */
+.why-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 52px;
+  font-weight: 400;
+  color: rgba(26, 122, 110, 0.15);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.why-item h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .why {
+    padding: 60px 5%;
+  }
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
