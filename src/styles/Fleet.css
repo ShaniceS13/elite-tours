@@ -17,7 +17,7 @@
 
 /* - Fleet Grid - */
 .fleet-grid {
-  display: block;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
 }
@@ -38,6 +38,10 @@
   display: block;
 }
 
+.fleet-card-body {
+  padding: 32px;
+}
+
 .fleet-card-body h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 28px;
@@ -46,7 +50,7 @@
   margin-bottom: 8px;
 }
 
-.fleet-bagde {
+.fleet-badge {
   display: inline-block;
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -90,7 +94,7 @@
 .spec-value {
   font-size: 18px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 600;
+  font-weight: 600;
   color: var(--teal);
 }
 
