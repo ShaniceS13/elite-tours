@@ -5,6 +5,7 @@ import About from "./components/About";
 import Fleet from "./components/Fleet";
 import WhyELite from "./components/WhyElite";
 import Gallery from "./components/Gallery";
+import BookingForm from "./components/BookingForm";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Fleet />
       <WhyELite />
       <Gallery />
+      <BookingForm />
     </div>
   );
 }
