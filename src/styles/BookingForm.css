@@ -52,6 +52,16 @@
 }
 
 /* Form - */
+
+.book {
+  background: var(--ivory);
+  padding: 100px 5% 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
 .book-form {
   display: flex;
   flex-direction: column;

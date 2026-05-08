@@ -6,6 +6,7 @@ import Fleet from "./components/Fleet";
 import WhyELite from "./components/WhyElite";
 import Gallery from "./components/Gallery";
 import BookingForm from "./components/BookingForm";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <WhyELite />
       <Gallery />
       <BookingForm />
+      <Footer />
     </div>
   );
 }
