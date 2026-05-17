@@ -1,7 +1,7 @@
 /* - Fleet Layout - */
 .fleet {
   background: var(--ivory);
-  padding: 100px 5%;
+  padding: 100px 5% 60px;
 }
 
 .fleet-intro {
