@@ -8,6 +8,7 @@ import Gallery from "./components/Gallery";
 import Experiences from "./components/Experience";
 import BookingForm from "./components/BookingForm";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Experiences />
       <BookingForm />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

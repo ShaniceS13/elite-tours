@@ -81,13 +81,35 @@ export default function BookingForm() {
             <div className="form-row">
               <div className="form-group">
                 <label>Tour Type</label>
-                <select name="tourType">
-                  <option>Island Highlight</option>
-                  <option>Cruise Shore Excursion</option>
-                  <option>Private Family Tour</option>
-                  <option>Cultural & Heritage</option>
-                  <option>Sunset Experience</option>
-                  <option>Custom Tour</option>
+                <select
+                  name="tourType"
+                  value={form.tourType}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Select a tour</option>
+                  <optgroup label="The Classics">
+                    <option>The Sweet Escape - $55pp</option>
+                    <option>Island Hello - $65pp</option>
+                  </optgroup>
+                  <optgroup label="Elite Experience">
+                    <option>Into the Wild - $85pp</option>
+                    <option>Below the Surface - $85pp</option>
+                    <option>Ride the Island - $95pp</option>
+                  </optgroup>
+                  <optgroup label="Island Premium">
+                    <option>Sky, Sea & Soul - $110pp</option>
+                    <option>The Full Rush - $120pp</option>
+                    <option>Above it All - $120pp</option>
+                    <option>Horseback & Horizon - $120pp</option>
+                  </optgroup>
+                  <optgroup label="Private & Custom">
+                    <option>The EliTe Private - $150pp</option>
+                    <option>The Family Legacy - Quoted</option>
+                  </optgroup>
+                  <optgroup label="Build Your Own">
+                    <option>Build Your Own Adventure</option>
+                  </optgroup>
                 </select>
               </div>
               <div className="form-group">
