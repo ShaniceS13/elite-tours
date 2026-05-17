@@ -1,6 +1,31 @@
+import { useState } from "react";
+
 import "../styles/BookingForm.css";
 
 export default function BookingForm() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/mlgvedbn", {
+      method: "POST",
+      body: data,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      setStatus("success");
+      form.reset();
+    } else {
+      setStatus("error");
+    }
+  };
+
   return (
     <section className="book" id="book">
       <div className="book-left">
@@ -38,25 +63,25 @@ export default function BookingForm() {
         </div>
 
         <div className="book-right">
-          <div className="book-form">
+          <form className="book-form" onSubmit={handleSubmit}>
             <div className="form-row">
               <div className="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="Maria" />
+                <input type="text" name="firstName" placeholder="Maria" />
               </div>
               <div className="form-group">
                 <label>Last Name</label>
-                <input type="text" placeholder="Johnson" />
+                <input type="text" name="lastName" placeholder="Johnson" />
               </div>
             </div>
             <div className="form-group">
               <label>Email Address</label>
-              <input type="text" placeholder="maria@email.com" />
+              <input type="text" name="email" placeholder="maria@email.com" />
             </div>
             <div className="form-row">
               <div className="form-group">
                 <label>Tour Type</label>
-                <select>
+                <select name="tourType">
                   <option>Island Highlight</option>
                   <option>Cruise Shore Excursion</option>
                   <option>Private Family Tour</option>
@@ -67,7 +92,7 @@ export default function BookingForm() {
               </div>
               <div className="form-group">
                 <label>Group Size</label>
-                <select>
+                <select name="groupSize">
                   <option>1-4</option>
                   <option>5-11</option>
                   <option>12-20</option>
@@ -77,14 +102,31 @@ export default function BookingForm() {
             </div>
             <div className="form-group">
               <label>Preferred Date</label>
-              <input type="date" />
+              <input type="date" name="date" />
             </div>
             <div className="form-group">
               <label>Tell Us About Your Group</label>
-              <textarea placeholder="Arriving by cruise ship? Staying at a resort? Any special requests? Let us know..."></textarea>
+              <textarea
+                name="message"
+                placeholder="Arriving by cruise ship? Staying at a resort? Any special requests? Let us know..."
+              ></textarea>
             </div>
+
+            {status === "success" && (
+              <p className="form-success">
+                Thank you!! We'll be in touch shortly to confirm your booking!
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="form-error">
+                Oops! Something went wrong. Please try again or email us
+                directly!
+              </p>
+            )}
+
             <button className="form-submit">Send Inquiry</button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
