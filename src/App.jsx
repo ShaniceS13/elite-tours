@@ -5,6 +5,7 @@ import About from "./components/About";
 import Fleet from "./components/Fleet";
 import WhyELite from "./components/WhyElite";
 import Gallery from "./components/Gallery";
+import Experiences from "./components/Experience";
 import BookingForm from "./components/BookingForm";
 import Footer from "./components/Footer";
 
@@ -17,6 +18,7 @@ function App() {
       <Fleet />
       <WhyELite />
       <Gallery />
+      <Experiences />
       <BookingForm />
       <Footer />
     </div>
