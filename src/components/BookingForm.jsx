@@ -81,12 +81,7 @@ export default function BookingForm() {
             <div className="form-row">
               <div className="form-group">
                 <label>Tour Type</label>
-                <select
-                  name="tourType"
-                  value={form.tourType}
-                  onChange={handleChange}
-                  required
-                >
+                <select name="tourType" required>
                   <option value="">Select a tour</option>
                   <optgroup label="The Classics">
                     <option>The Sweet Escape - $55pp</option>
