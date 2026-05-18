@@ -57,7 +57,14 @@ export default function BookingForm() {
             <div className="contact-icon">💬</div>
             <div>
               <span className="contact-label">WhatsApp</span>
-              <span className="contact-value">Coming soon</span>
+              <a
+                href="https://wa.me/50412345678?text=Hi!%20I'm%20interested%20in%20booking%20a%20tour%20with%20EliTe%20Tours%20Roat%C3%A1n."
+                target="_blank"
+                rel="noreferrer"
+                className="contact-value"
+              >
+                Chat with us on WhatsApp
+              </a>
             </div>
           </div>
         </div>

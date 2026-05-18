@@ -44,7 +44,13 @@ export default function Footer() {
               <a href="#">Instagram</a>
             </li>
             <li>
-              <a href="#">WhatsApp</a>
+              <a
+                href="https://wa.me/50412345678"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp
+              </a>
             </li>
           </ul>
         </div>
