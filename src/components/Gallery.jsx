@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "../styles/Gallery.css";
 
 export default function Gallery() {
@@ -48,17 +49,23 @@ export default function Gallery() {
     },
   ];
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <section className="gallery" id="gallery">
       <span className="section-tag">Gallery</span>
-      <h2 className="section-title">Roatan in Every Frame</h2>
-      <div className="gallery-grid">
+      <h2 className="section-title">Roatán in Every Frame</h2>
+      <div className="gallery-slider">
         {photos.map((photo, index) => (
           <div
-            className={`gallery-item ${index === 0 ? "gallery-item--large" : ""}`}
             key={index}
+            className={`gallery-slide ${index === activeIndex ? "active" : ""}`}
+            onMouseEnter={() => setActiveIndex(index)}
           >
             <img src={photo.src} alt={photo.alt} />
+            <div className="slide-overlay">
+              <span>{photo.alt}</span>
+            </div>
           </div>
         ))}
       </div>
