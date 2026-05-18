@@ -31,7 +31,7 @@ export default function About() {
         </p>
         <p>
           {" "}
-          As a <strong>family-owned and operated</strong>company, we pour our
+          As a <strong>family-owned and operated</strong> company, we pour our
           hearts into every tour. When you travel with us, you're not just a
           passenger, you're a guest of our family, experiencing this island the
           way locals know it best
