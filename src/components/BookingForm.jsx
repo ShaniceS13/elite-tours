@@ -34,7 +34,7 @@ export default function BookingForm() {
           Ready to See <br /> the Island?
         </h2>
         <p>
-          Reach out and let us start planning your perfect Roatan experience.
+          Reach out and let us start planning your perfect Roatán experience.
           Whether you're arriving by cruise ship, staying at a resort, or
           visiting family, we'll take care of everything.
         </p>
