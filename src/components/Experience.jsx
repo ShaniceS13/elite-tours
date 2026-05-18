@@ -15,7 +15,7 @@ export default function Experiences() {
         selectedActivities.filter((a) => a.id !== activity.id),
       );
     } else {
-      setSelectedActivities([...selectedActivities, acivity]);
+      setSelectedActivities([...selectedActivities, activity]);
     }
   };
 
@@ -103,12 +103,12 @@ export default function Experiences() {
       {/*Build Your Own */}
       {activeTier === "builder" && (
         <div className="builder-wrap">
-          <div className="builder-grip">
+          <div className="builder-grid">
             {activities.map((activity) => (
               <div
                 key={activity.id}
                 className={`activity-card ${isSelected(activity) ? "selected" : ""}`}
-                onClick={() => toggleActivity}
+                onClick={() => toggleActivity(activity)}
               >
                 <div className="activity-check">✓</div>
                 <div className="activity-name">{activity.name}</div>
