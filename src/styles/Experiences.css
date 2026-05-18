@@ -55,6 +55,7 @@
   background: var(--gold);
   border-color: var(--gold);
   color: var(--white);
+  transform: scale(1.05);
 }
 
 /* - Package Grid - */
@@ -75,12 +76,16 @@
   position: relative;
   transition:
     background 0.25s,
-    border-color 0.25s;
+    border-color 0.25s,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .pkg-card:hover {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(212, 160, 23, 0.35);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
 }
 
 .pkg-card.featured {
