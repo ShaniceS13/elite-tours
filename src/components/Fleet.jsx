@@ -9,8 +9,8 @@ export default function Fleet() {
           Comfort Meets <br /> the Caribbean
         </h2>
         <p>
-          Our modern, well-maintaned fleet is designed for your comfort from the
-          moment you step aboard, whether you're a group of adventurers or a
+          Our modern, well-maintained fleet is designed for your comfort from
+          the moment you step aboard, whether you're a group of adventurers or a
           family discovering the island for the first time
         </p>
       </div>
