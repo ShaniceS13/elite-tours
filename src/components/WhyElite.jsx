@@ -1,3 +1,4 @@
+import useInView from "../hooks/useInView";
 import "../styles/WhyElite.css";
 
 export default function WhyElite() {
@@ -24,11 +25,15 @@ export default function WhyElite() {
     },
   ];
 
+  const [ref, inView] = useInView();
+
   return (
-    <section className="why" id="why">
+    <section className="why" id="why" ref={ref}>
       <span className="section-tag">Why Elite</span>
-      <h2 className="section-title">The EliTe Difference</h2>
-      <div className="why-grid">
+      <h2 className={`section-title fade-in ${inView ? "visible" : ""}`}>
+        The EliTe Difference
+      </h2>
+      <div className={`why-grid fade-in ${inView ? "visible" : ""}`}>
         {reasons.map((reason) => (
           <div className="why-item" key={reason.number}>
             <div className="why-num">{reason.number}</div>

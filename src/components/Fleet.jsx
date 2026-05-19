@@ -1,9 +1,11 @@
+import useInView from "../hooks/useInView";
 import "../styles/Fleet.css";
 
 export default function Fleet() {
+  const [ref, inView] = useInView();
   return (
-    <section className="fleet" id="fleet">
-      <div className="fleet-intro">
+    <section className="fleet" id="fleet" ref={ref}>
+      <div className={`fleet-intro fade-in ${inView ? "visible" : ""}`}>
         <span className="section-tag">Our Fleet</span>
         <h2 className="section-title">
           Comfort Meets <br /> the Caribbean
@@ -15,7 +17,7 @@ export default function Fleet() {
         </p>
       </div>
 
-      <div className="fleet-grid">
+      <div className={`fleet-grid fade-in ${inView ? "visible" : ""}`}>
         <div className="fleet-card">
           <img
             src="/images/bus-21.PNG"

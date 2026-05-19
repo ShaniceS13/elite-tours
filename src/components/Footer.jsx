@@ -1,9 +1,12 @@
+import { use } from "react";
+import useInView from "../hooks/useInView";
 import "../styles/Footer.css";
 
 export default function Footer() {
+  const [ref, inView] = useInView();
   return (
-    <footer className="footer">
-      <div className="footer-top">
+    <footer className="footer" ref={ref}>
+      <div className={`footer-top fade-in ${inView ? "visible" : ""}`}>
         <div className="footer-brand">
           <span className="footer-logo">
             Eli<span>Te</span>Tours
@@ -55,7 +58,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className={`footer-bottom fade-in ${inView ? "visible" : ""}`}>
         <p>© 2026 EliTe Tours · Roatán, Honduras · All rights reserved</p>
         <span className="footer-memorial">For Eli & Tete, always</span>
       </div>

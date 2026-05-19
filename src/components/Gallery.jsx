@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useInView from "../hooks/useInView";
 import "../styles/Gallery.css";
 
 export default function Gallery() {
@@ -50,12 +51,15 @@ export default function Gallery() {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [ref, inView] = useInView();
 
   return (
-    <section className="gallery" id="gallery">
+    <section className="gallery" id="gallery" ref={ref}>
       <span className="section-tag">Gallery</span>
-      <h2 className="section-title">Roatán in Every Frame</h2>
-      <div className="gallery-slider">
+      <h2 className={`section-title fade-in ${inView ? "visible" : ""}`}>
+        Roatán in Every Frame
+      </h2>
+      <div className={`gallery-slider fade-in ${inView ? "visible" : ""}`}>
         {photos.map((photo, index) => (
           <div
             key={index}

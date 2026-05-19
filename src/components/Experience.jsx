@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { packages, tiers } from "../data/packages";
 import { activities } from "../data/activities";
+import useInView from "../hooks/useInView";
 import "../styles/Experiences.css";
 
 export default function Experiences() {
@@ -18,6 +19,7 @@ export default function Experiences() {
       setSelectedActivities([...selectedActivities, activity]);
     }
   };
+  const [ref, inView] = useInView();
 
   const isSelected = (activity) => {
     return selectedActivities.find((a) => a.id === activity.id);
@@ -27,8 +29,8 @@ export default function Experiences() {
     32 + selectedActivities.reduce((sum, a) => sum + a.price, 0);
 
   return (
-    <section className="experiences" id="tours">
-      <div className="experiences-header">
+    <section className="experiences" id="tours" ref={ref}>
+      <div className={`experiences-header fade-in ${inView ? "visible" : ""}`}>
         <span className="section-tag">Experiences</span>
         <h2 className="section-title">
           Discover Roatan
@@ -43,7 +45,7 @@ export default function Experiences() {
       </div>
 
       {/* Tier Tabs */}
-      <div className="tier-tabs">
+      <div className={`tier-tabs fade-in ${inView ? "visible" : ""}`}>
         {tiers.map((tier) => (
           <button
             key={tier.id}
@@ -64,7 +66,7 @@ export default function Experiences() {
 
       {/* Package Cards */}
       {activeTier !== "builder" && (
-        <div className="pkg-grid">
+        <div className={`pkg-grid fade-in ${inView ? "visible" : ""}`}>
           {filteredPackages.map((pkg) => (
             <div
               key={pkg.id}

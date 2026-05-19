@@ -1,4 +1,5 @@
-import { useState } from "react";
+import useInView from "../hooks/useInView";
+import { use, useState } from "react";
 
 import "../styles/BookingForm.css";
 
@@ -26,9 +27,11 @@ export default function BookingForm() {
     }
   };
 
+  const [ref, inView] = useInView();
+
   return (
-    <section className="book" id="book">
-      <div className="book-left">
+    <section className="book" id="book" ref={ref}>
+      <div className={`book-left fade-in ${inView ? "visible" : ""}`}>
         <span className="section-tag">Book Your Experience</span>
         <h2 className="section-title">
           Ready to See <br /> the Island?
@@ -72,7 +75,7 @@ export default function BookingForm() {
         </div>
       </div>
 
-      <div className="book-right">
+      <div className={`book-right fade-in ${inView ? "visible" : ""}`}>
         <form className="book-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">

@@ -1,8 +1,10 @@
+import useInView from "../hooks/useInView";
 import "../styles/About.css";
 
 export default function About() {
+  const [ref, inView] = useInView();
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" ref={ref}>
       <div className="about-img">
         <img
           src="/images/roatan-aerial.jpg"
@@ -17,7 +19,7 @@ export default function About() {
         />
       </div>
 
-      <div className="about-text">
+      <div className={`about-text fade-in ${inView ? "visible" : ""}`}>
         <span className="section-tag">Our Story</span>
         <h2 className="section-title">
           Built on Love, <br /> Grounded in Faith
