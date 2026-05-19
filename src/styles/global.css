@@ -56,3 +56,15 @@ img {
   max-width: 100%;
   display: block;
 }
+
+@media (max-width: 480px) {
+  .about,
+  .fleet,
+  .why,
+  .gallery,
+  .experiences,
+  .book {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+}
