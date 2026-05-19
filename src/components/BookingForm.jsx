@@ -38,34 +38,36 @@ export default function BookingForm() {
           Whether you're arriving by cruise ship, staying at a resort, or
           visiting family, we'll take care of everything.
         </p>
+
         <div className="contact-detail">
           <div className="contact-icon">✉</div>
           <div>
             <span className="contact-label">Email</span>
             <span className="contact-value">info@elitetours.hn</span>
           </div>
-          <div className="contact-detail">
-            <div className="contact-icon">📍</div>
-            <div>
-              <span className="contact-label">Location</span>
-              <span className="contact-value">
-                Roatan, Bay Islands, Honduras
-              </span>
-            </div>
+        </div>
+
+        <div className="contact-detail">
+          <div className="contact-icon">📍</div>
+          <div>
+            <span className="contact-label">Location</span>
+            <span className="contact-value">Roatán, Bay Islands, Honduras</span>
           </div>
-          <div className="contact-detail">
-            <div className="contact-icon">💬</div>
-            <div>
-              <span className="contact-label">WhatsApp</span>
-              <a
-                href="https://wa.me/50412345678?text=Hi!%20I'm%20interested%20in%20booking%20a%20tour%20with%20EliTe%20Tours%20Roat%C3%A1n."
-                target="_blank"
-                rel="noreferrer"
-                className="contact-value"
-              >
-                Chat with us on WhatsApp
-              </a>
-            </div>
+        </div>
+
+        <div className="contact-detail">
+          <div className="contact-icon">💬</div>
+          <div>
+            <span className="contact-label">WhatsApp</span>
+
+            <a
+              href="https://wa.me/50412345678?text=Hi!%20I'm%20interested%20in%20booking%20a%20tour%20with%20EliTe%20Tours%20Roat%C3%A1n."
+              target="_blank"
+              rel="noreferrer"
+              className="contact-value"
+            >
+              Chat with us on WhatsApp
+            </a>
           </div>
         </div>
       </div>
