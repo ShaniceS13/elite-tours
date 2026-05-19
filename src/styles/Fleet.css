@@ -28,6 +28,14 @@
   border-radius: 2px;
   overflow: hidden;
   background: var(--white);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fleet-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
 .fleet-card-img {
