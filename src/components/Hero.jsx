@@ -1,6 +1,20 @@
+import { useEffect } from "react";
 import "../styles/Hero.css";
 
 export default function Hero() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const heroBg = document.querySelector(".hero-bg");
+      if (heroBg) {
+        heroBg.style.transform = `translateY(${scrolled * 0.4}px)`;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="hero">
       <div className="hero-bg"></div>
