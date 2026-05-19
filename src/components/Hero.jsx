@@ -4,6 +4,7 @@ import "../styles/Hero.css";
 export default function Hero() {
   useEffect(() => {
     const handleScroll = () => {
+      if (window.innerWidth < 768) return;
       const scrolled = window.scrollY;
       const heroBg = document.querySelector(".hero-bg");
       if (heroBg) {
