@@ -1,7 +1,7 @@
 /* - Book Section -*/
 .book {
   background: var(--ivory);
-  padding: 100px 5%;
+  padding: 60px 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
