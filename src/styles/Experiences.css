@@ -218,8 +218,8 @@
 }
 
 .activity-card {
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 2px;
   padding: 16px 18px;
   cursor: pointer;
@@ -348,6 +348,52 @@
   color: rgba(255, 255, 255, 0.3);
   line-height: 1.6;
   margin-top: 12px;
+}
+
+/* - Group Size Selector - */
+.group-size-selector {
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.group-size-selector label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.size-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.size-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s;
+}
+
+.size-btn:hover {
+  border-color: rgba(212, 160, 23, 0.5);
+  color: var(--white);
+}
+
+.size-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
 }
 
 /* - Mobile - */

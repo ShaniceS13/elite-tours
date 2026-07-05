@@ -7,6 +7,7 @@ import "../styles/Experiences.css";
 export default function Experiences() {
   const [activeTier, setActiveTier] = useState("t1");
   const [selectedActivities, setSelectedActivities] = useState([]);
+  const [groupSize, setGroupSize] = useState(1);
 
   const filteredPackages = packages.filter((pkg) => pkg.tier === activeTier);
 
@@ -26,7 +27,7 @@ export default function Experiences() {
   };
 
   const totalPrice =
-    32 + selectedActivities.reduce((sum, a) => sum + a.price, 0);
+    (32 + selectedActivities.reduce((sum, a) => sum + a.price, 0)) * groupSize;
 
   return (
     <section className="experiences" id="tours" ref={ref}>
@@ -125,6 +126,26 @@ export default function Experiences() {
 
           <div className="builder-summary">
             <h4>Your Adventure</h4>
+            <div className="group-size-selector">
+              <label>Group Size</label>
+              <div className="size-btns">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
+                  <button
+                    key={n}
+                    className={`size-btn ${groupSize === n ? "active" : ""}`}
+                    onClick={() => setGroupSize(n)}
+                  >
+                    {n}
+                  </button>
+                ))}
+                <button
+                  className={`size-btn ${groupSize === 11 ? "active" : ""}`}
+                  onClick={() => setGroupSize(11)}
+                >
+                  11+
+                </button>
+              </div>
+            </div>
             {selectedActivities.length === 0 ? (
               <p className="empty-msg">Select activities to get started</p>
             ) : (
