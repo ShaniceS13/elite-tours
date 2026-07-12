@@ -57,7 +57,7 @@ export default function Gallery() {
     <section className="gallery" id="gallery" ref={ref}>
       <span className="section-tag">Gallery</span>
       <h2 className={`section-title fade-in ${inView ? "visible" : ""}`}>
-        Roatán in Every Frame
+        Roatan in Every Frame
       </h2>
       <div className={`gallery-slider fade-in ${inView ? "visible" : ""}`}>
         {photos.map((photo, index) => (

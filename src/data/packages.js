@@ -22,7 +22,7 @@ export const packages = [
     id: 2,
     tier: "t1",
     name: "Island Hello",
-    tagline: "The perfect first look ay our island",
+    tagline: "The perfect first look at our island",
     details:
       "New to Roatan? This is where we start. A relaxed drive through the island's best views, a visit with our sloths and monkeys, and a beach break to end it right — the perfect first hello.",
     price: 65,
@@ -62,7 +62,7 @@ export const packages = [
     id: 4,
     tier: "t2",
     name: "Below the Surface",
-    tagline: "Reef, wildlife, culture- all in one",
+    tagline: "Reef, wildlife, culture - all in one",
     details:
       "Slip below the waves at the Blue Channel or West Bay, then surface to sloths, monkeys, and a little city sightseeing. Reef, wildlife, and culture, all in one easy day.",
     price: 85,

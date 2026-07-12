@@ -9,6 +9,7 @@ import Experiences from "./components/Experience";
 import BookingForm from "./components/BookingForm";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import Mission from "./components/Mission";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Hero />
       <Experiences />
       <About />
+      <Mission />
 
       <WhyELite />
       <Fleet />

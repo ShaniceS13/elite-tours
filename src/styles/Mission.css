@@ -1,0 +1,32 @@
+.mission {
+  background: var(--ivory);
+  padding: 60px 5%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission .section-tag {
+  display: block;
+}
+
+.mission .section-title {
+  margin-bottom: 24px;
+}
+
+.mission-text {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+/* - Mobile - */
+@media (max-width: 600px) {
+  .mission {
+    padding: 60px 5%;
+  }
+
+  .mission-text {
+    font-size: 16px;
+  }
+}
