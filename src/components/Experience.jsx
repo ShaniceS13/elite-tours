@@ -8,6 +8,7 @@ export default function Experiences() {
   const [activeTier, setActiveTier] = useState("t1");
   const [selectedActivities, setSelectedActivities] = useState([]);
   const [groupSize, setGroupSize] = useState(1);
+  const [expandedCards, setExpandedCards] = useState([]);
 
   const filteredPackages = packages.filter((pkg) => pkg.tier === activeTier);
 
@@ -20,6 +21,15 @@ export default function Experiences() {
       setSelectedActivities([...selectedActivities, activity]);
     }
   };
+
+  const toggleExpand = (id) => {
+    if (expandedCards.includes(id)) {
+      setExpandedCards(expandedCards.filter((cardId) => cardId !== id));
+    } else {
+      setExpandedCards([...expandedCards, id]);
+    }
+  };
+
   const [ref, inView] = useInView();
 
   const isSelected = (activity) => {
@@ -95,6 +105,18 @@ export default function Experiences() {
                   </span>
                 ))}
               </div>
+
+              {expandedCards.includes(pkg.id) && (
+                <p className="pkg-details">{pkg.details}</p>
+              )}
+
+              <button
+                className="pkg-expand-btn"
+                onClick={() => toggleExpand(pkg.id)}
+              >
+                {expandedCards.includes(pkg.id) ? "Shows Less" : "View More"}
+              </button>
+
               <a href="#book" className="pkg-btn">
                 {pkg.tier === "t4" ? "Request a Quote" : "Book This Package"}
               </a>

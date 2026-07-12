@@ -4,6 +4,8 @@ export const packages = [
     tier: "t1",
     name: "The Sweet Escape",
     tagline: "Sweet, wild, and wonderfully Roatan",
+    details:
+      "Meet Roatan's sloths and monkeys up close, taste real cacao and rum cake straight from the source, then sink your toes into West Bay sand. A perfect little taste of the island, no rush required",
     price: 55,
     duration: "~5 hrs",
     tags: ["All ages", "Cruise-friendly"],
@@ -21,6 +23,8 @@ export const packages = [
     tier: "t1",
     name: "Island Hello",
     tagline: "The perfect first look ay our island",
+    details:
+      "New to Roatan? This is where we start. A relaxed drive through the island's best views, a visit with our sloths and monkeys, and a beach break to end it right — the perfect first hello.",
     price: 65,
     duration: "~5 hrs",
     tags: ["All Ages", "Cruise-friendly"],
@@ -39,6 +43,8 @@ export const packages = [
     tier: "t2",
     name: "Into the Wild",
     tagline: "Soar through the jungle, meet the animals",
+    details:
+      "Fly through the jungle canopy, then unwind with sloths and monkeys before a stop at West Bay. Our most popular tour for a reason — a little adrenaline, a lot of island charm.",
     price: 85,
     duration: "~6 hrs",
     tags: ["Adventure", "Cruise-friendly"],
@@ -57,6 +63,8 @@ export const packages = [
     tier: "t2",
     name: "Below the Surface",
     tagline: "Reef, wildlife, culture- all in one",
+    details:
+      "Slip below the waves at the Blue Channel or West Bay, then surface to sloths, monkeys, and a little city sightseeing. Reef, wildlife, and culture, all in one easy day.",
     price: 85,
     duration: "~6 hrs",
     tags: ["Water lovers", "Cruise-friendly"],
@@ -75,6 +83,8 @@ export const packages = [
     tier: "t2",
     name: "Ride the Island",
     tagline: "Horseback through Roatán's most scenic routes",
+    details:
+      "Horseback along some of Roatán's most scenic trails, then a stop with our sloths and monkeys and a drive through the island's best views. Slow, scenic, and made for families.",
     price: 95,
     duration: "~6 hrs",
     tags: ["Families", "Cruise-friendly"],
@@ -92,6 +102,8 @@ export const packages = [
     tier: "t3",
     name: "Sky, Sea & Soul",
     tagline: "The ultimate Roatán combo",
+    details:
+      "Zip through the canopy, snorkel the reef, meet our sloths and monkeys, and wind down on the beach — the ultimate Roatán combo for those who want to do it all in one day.",
     price: 110,
     duration: "Full day",
     tags: ["Adventure"],
@@ -111,6 +123,8 @@ export const packages = [
     tier: "t3",
     name: "The Full Rush",
     tagline: "Off-road, wild, and unforgettable",
+    details:
+      "Off-road through the island's wild side on an ATV adventure, then cool down with sloths and monkeys and a beach break. Dusty, thrilling, and unforgettable.",
     price: 120,
     duration: "Full day",
     tags: ["Thrill-seekers"],
@@ -128,6 +142,8 @@ export const packages = [
     tier: "t3",
     name: "Above It All",
     tagline: "800 feet above the Caribbean Sea",
+    details:
+      "800 feet above the Caribbean, the whole island unfolds beneath you. Followed by West Bay Beach and a bit of city sightseeing, a bucket-list moment, EliTe style.",
     price: 120,
     duration: "Half day",
     tags: ["Bucket list"],
@@ -145,6 +161,8 @@ export const packages = [
     tier: "t3",
     name: "Horseback & Horizon",
     tagline: "Ride in, dive in, drift along the mangroves",
+    details:
+      "Ride in on horseback, drift through the mangrove tunnels, then snorkel the reef and relax on the beach. A full day for anyone who loves the island's wild, quiet corners.",
     price: 120,
     duration: "Full day",
     tags: ["Nature lovers"],
@@ -163,6 +181,8 @@ export const packages = [
     tier: "t3",
     name: "The Grand Islander",
     tagline: "A private island paradise — Little French Key",
+    details:
+      "A full day on your own private slice of paradise at Little French Key — exotic animals, warm water, good food, and nowhere else you need to be. This one's for slowing all the way down.",
     price: 130,
     duration: "Full day",
     tags: ["All-inclusive feel"],
@@ -180,6 +200,8 @@ export const packages = [
     tier: "t3",
     name: "Infinity Bay Escape",
     tagline: "All-inclusive luxury on the beach",
+    details:
+      "A full day of all-inclusive beachfront luxury — food, drinks, and beach amenities included. Just show up, relax, and let the island take care of the rest.",
     price: 130,
     duration: "Full day",
     tags: ["Relaxation"],
@@ -197,6 +219,8 @@ export const packages = [
     tier: "t4",
     name: "The EliTe Private",
     tagline: "Your island. Your itinerary. Our care.",
+    details:
+      "This is EliTe at its core — your itinerary, your pace, our care. Whether it's one stop or five, we build the day around you and your group, exactly how family should.",
     price: 150,
     duration: "Flexible",
     tags: ["Private group"],
@@ -215,6 +239,8 @@ export const packages = [
     tier: "t4",
     name: "The Family Legacy",
     tagline: "For families who want to experience Roatán together",
+    details:
+      "Built for families who want Roatán together — kid-friendly stops, a pace that works for every age, and photo moments curated just for you. This is how memories are made.",
     price: 0,
     duration: "Flexible",
     tags: ["Family-focused", "All ages"],

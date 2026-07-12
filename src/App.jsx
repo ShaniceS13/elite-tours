@@ -15,11 +15,13 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <About />
-      <Fleet />
-      <WhyELite />
-      <Gallery />
       <Experiences />
+      <About />
+
+      <WhyELite />
+      <Fleet />
+      <Gallery />
+
       <BookingForm />
       <Footer />
       <WhatsAppButton />
