@@ -5,6 +5,7 @@ import "../styles/BookingForm.css";
 
 export default function BookingForm() {
   const [status, setStatus] = useState("");
+  const [groupSize, setGroupSize] = useState(1);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -122,12 +123,26 @@ export default function BookingForm() {
             </div>
             <div className="form-group">
               <label>Group Size</label>
-              <select name="groupSize">
-                <option>1-4</option>
-                <option>5-11</option>
-                <option>12-20</option>
-                <option>20+</option>
-              </select>
+              <div className="size-btns">
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((n) => (
+                  <button
+                    key={n}
+                    type="button"
+                    className={`size-btn ${groupSize === n ? "active" : ""}`}
+                    onClick={() => setGroupSize(n)}
+                  >
+                    {n}
+                  </button>
+                ))}
+                <button
+                  type="button"
+                  className={`size-btn ${groupSize === 11 ? "active" : ""}`}
+                  onClick={() => setGroupSize(11)}
+                >
+                  11+
+                </button>
+              </div>
+              <input type="hidden" name="groupSize" value={groupSize} />
             </div>
           </div>
           <div className="form-group">

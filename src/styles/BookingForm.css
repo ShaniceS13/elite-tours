@@ -112,6 +112,37 @@
   min-height: 120px;
 }
 
+/* - Group Size Buttons -*/
+.book .size-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.book .size-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--sand-dark);
+  background: transparent;
+  color: var(--text-muted);
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: "DM Sans", sans-serif;
+  transition: all 0.2s;
+}
+
+.book .size-btn:hover {
+  border-color: var(--gold);
+  color: var(--text-muted);
+}
+
+.book .size-btn.active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
 .form-submit {
   background: var(--teal);
   color: var(--white);
