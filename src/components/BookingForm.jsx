@@ -1,11 +1,14 @@
 import useInView from "../hooks/useInView";
 import { use, useState } from "react";
+import { packages, tiers } from "../data/packages";
 
 import "../styles/BookingForm.css";
 
 export default function BookingForm() {
   const [status, setStatus] = useState("");
   const [groupSize, setGroupSize] = useState(1);
+  const [selectedTour, setSelectedTour] = useState("");
+  const [paymentType, setPaymentType] = useState("deposit");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,6 +32,11 @@ export default function BookingForm() {
   };
 
   const [ref, inView] = useInView();
+  const selectedPackage = packages.find((pkg) => pkg.name === selectedTour);
+  const pricePerPerson = selectedPackage ? selectedPackage.price : 0;
+  const totalPrice = pricePerPerson * groupSize;
+  const depositAmount = totalPrice * 0.25;
+  const amountDue = paymentType === "deposit" ? depositAmount : totalPrice;
 
   return (
     <section className="book" id="book" ref={ref}>
@@ -88,6 +96,59 @@ export default function BookingForm() {
               <input type="text" name="lastName" placeholder="Johnson" />
             </div>
           </div>
+          {selectedPackage && pricePerPerson > 0 && (
+            <div className="form-group price-summary">
+              <label>Payment Option</label>
+              <div className="payment-toggle">
+                <button
+                  type="button"
+                  className={`payment-btn ${paymentType === "deposit" ? "active" : ""}`}
+                  onClick={() => setPaymentType("deposit")}
+                >
+                  25% Deposit
+                </button>
+                <button
+                  type="button"
+                  className={`payment-btn ${paymentType === "full" ? "active" : ""}`}
+                  onClick={() => setPaymentType("full")}
+                >
+                  Pay in Full
+                </button>
+              </div>
+
+              <div className="price-breakdown">
+                <div className="price-line">
+                  <span>
+                    Total ({groupSize} {groupSize === 1 ? "guest" : "guests"})
+                  </span>
+                  <span>${totalPrice}</span>
+                </div>
+                <div className="price-line price-due">
+                  <span>
+                    {paymentType === "deposit"
+                      ? "Deposit Due Now"
+                      : "Full Payment Due"}
+                  </span>
+                  <strong>${amountDue.toFixed(2)}</strong>
+                </div>
+              </div>
+
+              <input type="hidden" name="paymentType" value={paymentType} />
+              <input
+                type="hidden"
+                name="amountDue"
+                value={amountDue.toFixed(2)}
+              />
+            </div>
+          )}
+          {selectedPackage && pricePerPerson === 0 && (
+            <div className="form-group price-summary">
+              <p className="quoted-note">
+                This package is custom-quoted — we'll follow up with pricing
+                based on your group's needs
+              </p>
+            </div>
+          )}
           <div className="form-group">
             <label>Email Address</label>
             <input type="text" name="email" placeholder="maria@email.com" />
@@ -95,31 +156,31 @@ export default function BookingForm() {
           <div className="form-row">
             <div className="form-group">
               <label>Tour Type</label>
-              <select name="tourType" required>
+              <select
+                name="tourType"
+                required
+                value={selectedTour}
+                onChange={(e) => setSelectedTour(e.target.value)}
+              >
                 <option value="">Select a tour</option>
-                <optgroup label="The Classics">
-                  <option>The Sweet Escape - $55pp</option>
-                  <option>Island Hello - $65pp</option>
-                </optgroup>
-                <optgroup label="Elite Experience">
-                  <option>Into the Wild - $85pp</option>
-                  <option>Below the Surface - $85pp</option>
-                  <option>Ride the Island - $95pp</option>
-                </optgroup>
-                <optgroup label="Island Premium">
-                  <option>Sky, Sea & Soul - $110pp</option>
-                  <option>The Full Rush - $120pp</option>
-                  <option>Above it All - $120pp</option>
-                  <option>Horseback & Horizon - $120pp</option>
-                </optgroup>
-                <optgroup label="Private & Custom">
-                  <option>The EliTe Private - $150pp</option>
-                  <option>The Family Legacy - Quoted</option>
-                </optgroup>
-                <optgroup label="Build Your Own">
-                  <option>Build Your Own Adventure</option>
-                </optgroup>
+                {tiers.map((tier) => (
+                  <optgroup key={tier.id} label={tier.label}>
+                    {packages
+                      .filter((pkg) => pkg.tier === tier.id)
+                      .map((pkg) => (
+                        <option key={pkg.id} value={pkg.name}>
+                          {pkg.name}{" "}
+                          {pkg.price > 0 ? `- $${pkg.price}pp` : "- Quoted"}
+                        </option>
+                      ))}
+                  </optgroup>
+                ))}
               </select>
+              <p className="tour-type-note">
+                Want a custom trip? Use the {""}{" "}
+                <a href="#tours">Build Your Own tool </a>above and we'll turn it
+                into a quote.
+              </p>
             </div>
             <div className="form-group">
               <label>Group Size</label>

@@ -10,8 +10,8 @@ export default function Mission() {
         beauty, we want to connect you with the culture and the people of this
         island we call home. We've been blessed with this island and all it
         holds, and by His grace, we want to share it with you. Thank you for
-        trusting us with your time here — we're honored to have you, and
-        grateful to be part of your Roatan story.
+        trusting us with your time here, we're honored to have you, and grateful
+        to be part of your Roatan story.
       </p>
     </section>
   );
