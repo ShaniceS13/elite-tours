@@ -105,14 +105,14 @@ export default function BookingForm() {
                   className={`payment-btn ${paymentType === "deposit" ? "active" : ""}`}
                   onClick={() => setPaymentType("deposit")}
                 >
-                  25% Deposit
+                  25% Deposit + Pay Rest in Person
                 </button>
                 <button
                   type="button"
                   className={`payment-btn ${paymentType === "full" ? "active" : ""}`}
                   onClick={() => setPaymentType("full")}
                 >
-                  Pay in Full
+                  Pay in Full Online
                 </button>
               </div>
 
