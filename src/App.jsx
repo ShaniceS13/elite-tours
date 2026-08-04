@@ -10,6 +10,7 @@ import BookingForm from "./components/BookingForm";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Mission from "./components/Mission";
+import CancellationPolicy from "./components/CancellationPolicy";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
       <Gallery />
 
       <BookingForm />
+      <CancellationPolicy />
       <Footer />
       <WhatsAppButton />
     </div>

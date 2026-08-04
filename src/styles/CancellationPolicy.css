@@ -1,0 +1,85 @@
+/* - Cancellation Policy Section - */
+.cancellation-policy {
+  background: var(--sand);
+  padding: 60px 5%;
+}
+
+.cancellation-policy .section-title {
+  margin-bottom: 40px;
+}
+
+/* - Two Column Grid - */
+.policy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+/* - Policy Blocks - */
+.policy-block {
+  margin-bottom: 32px;
+}
+
+.policy-block:last-child {
+  margin-bottom: 0;
+}
+
+.policy-block h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 12px;
+}
+
+.policy-block p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.policy-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.policy-block li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  padding-left: 20px;
+  position: relative;
+}
+
+.policy-block li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+  top: 4px;
+}
+
+.policy-block strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .cancellation-policy {
+    padding: 60px 5%;
+  }
+
+  .policy-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .policy-block h3 {
+    font-size: 20px;
+  }
+}

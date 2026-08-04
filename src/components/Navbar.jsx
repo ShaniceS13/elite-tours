@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <a href="#" className="nav-logo">
-        Roatn by Eli<span>Te</span>
+        Roatan by Eli<span>Te</span>
       </a>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
