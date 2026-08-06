@@ -48,8 +48,9 @@
 /* ── Nav Links ── */
 .nav-links {
   display: flex;
-  gap: 36px;
+  gap: 24px;
   list-style: none;
+  align-items: center;
 }
 
 .nav-links a {
@@ -73,6 +74,7 @@
   padding: 10px 24px;
   border-radius: 2px;
   transition: background 0.2s !important;
+  white-space: nowrap;
 }
 
 .nav-cta:hover {

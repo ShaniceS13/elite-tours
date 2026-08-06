@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
 
 export default function Navbar() {
@@ -6,35 +7,54 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="#" className="nav-logo">
+      <Link to="/" className="nav-logo" onClick={() => setIsOpen(false)}>
         Roatan by Eli<span>Te</span>
-      </a>
+      </Link>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
         <li>
-          <a href="#about" onClick={() => setIsOpen(false)}>
-            Our Story{" "}
-          </a>
+          <Link to="/#about" onClick={() => setIsOpen(false)}>
+            Our Story
+          </Link>
         </li>
         <li>
-          <a href="#fleet" onClick={() => setIsOpen(false)}>
+          <Link to="/#fleet" onClick={() => setIsOpen(false)}>
             Our Fleet
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#tours" onClick={() => setIsOpen(false)}>
+          <Link to="/#tours" onClick={() => setIsOpen(false)}>
             Experiences
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#gallery" onClick={() => setIsOpen(false)}>
+          <Link to="/#services" onClick={() => setIsOpen(false)}>
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link to="/#gallery" onClick={() => setIsOpen(false)}>
             Gallery
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#book" className="nav-cta" onClick={() => setIsOpen(false)}>
+          <Link to="/#policy" onClick={() => setIsOpen(false)}>
+            Policy
+          </Link>
+        </li>
+        <li>
+          <Link to="/faq" onClick={() => setIsOpen(false)}>
+            FAQ
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/#book"
+            className="nav-cta"
+            onClick={() => setIsOpen(false)}
+          >
             Book Now
-          </a>
+          </Link>
         </li>
       </ul>
 
