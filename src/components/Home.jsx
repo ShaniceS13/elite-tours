@@ -9,6 +9,7 @@ import Mission from "./Mission";
 import CancellationPolicy from "./CancellationPolicy";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import OurServices from "./OurServices";
 
 export default function Home() {
   const location = useLocation();
@@ -28,6 +29,7 @@ export default function Home() {
       <About />
       <Mission />
       <WhyELite />
+      <OurServices />
       <Fleet />
       <Gallery />
       <BookingForm />

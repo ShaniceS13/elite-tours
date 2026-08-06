@@ -1,0 +1,64 @@
+/* - Our Services Section - */
+.our-services {
+  background: var(--ivory);
+  padding: 60px 5%;
+}
+
+.our-services .section-title {
+  margin-bottom: 48px;
+}
+
+/* - Grid - */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* - Card - */
+.service-card {
+  background: var(--sand);
+  border: 1px solid var(--sand-dark);
+  border-radius: 2px;
+  padding: 28px 24px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .our-services {
+    padding: 60px 5%;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
