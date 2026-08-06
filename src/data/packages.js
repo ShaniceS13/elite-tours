@@ -6,6 +6,15 @@ export const packages = [
     tagline: "Sweet, wild, and wonderfully Roatan",
     details:
       "Meet Roatan's sloths and monkeys up close, taste real cacao and rum cake straight from the source, then sink your toes into West Bay sand. A perfect little taste of the island, no rush required",
+    fullDescription:
+      "Your day begins with a relaxed drive through the island, first stop: the Monkey & Sloth Sanctuary, where you'll get up close with some of Roatan's most beloved residents. From there, we head to the Chocolate & Rum Cake Factory for a taste of real island flavor — cacao and rum cake made right here. We'll close out the day at West Bay Beach, with time to relax and take in the water before heading back. A gentle, easy introduction to everything that makes Roatan special.",
+    itinerary: [
+      { stop: "Monkeys & Sloths Sanctuary", time: "30-40 min" },
+      { stop: "Chocolate Factory", time: "15-20 min" },
+      { stop: "Rum Cake Company", time: "10-15 min" },
+      { stop: "Stop for Photos (Roatan Sign)", time: "10-15 min" },
+      { stop: "West Bay Beach", time: "2-3 hrs" },
+    ],
     price: 55,
     duration: "~5 hrs",
     tags: ["All ages", "Cruise-friendly"],
@@ -25,6 +34,14 @@ export const packages = [
     tagline: "The perfect first look at our island",
     details:
       "New to Roatan? This is where we start. A relaxed drive through the island's best views, a visit with our sloths and monkeys, and a beach break to end it right — the perfect first hello.",
+    fullDescription:
+      "Perfect for your first time on the island, this tour starts with a scenic city drive and sightseeing through Roatan's highlights. Next, we visit the Monkey & Sloth Sanctuary for an up-close encounter with the island's wildlife. We'll finish at West Bay Beach, giving you time to relax before heading back. A relaxed, well-rounded first look at everything Roatan has to offer.",
+    itinerary: [
+      { stop: "City Tour & Sightseeing", time: "45-60 min" },
+      { stop: "Monkeys & Sloths Sanctuary", time: "30-40 min" },
+      { stop: "Stop for Photos", time: "10-15 min" },
+      { stop: "West Bay Beach", time: "2-3 hrs" },
+    ],
     price: 65,
     duration: "~5 hrs",
     tags: ["All Ages", "Cruise-friendly"],
@@ -37,7 +54,6 @@ export const packages = [
       "Round-trip A/C transport",
     ],
   },
-
   {
     id: 3,
     tier: "t2",
@@ -57,9 +73,13 @@ export const packages = [
       "Round-trip A/C transport",
     ],
     fullDescription:
-      "Your day starts with pickup and a scenic drive toward the heart of the island. First stop: our zip line course, where you'll soar through the jungle canopy on a series of ziplines with sweeping views of Roatán's coastline below — no experience necessary, we walk you through every step. From there, we head to the Monkey & Sloth Sanctuary, where you'll get up close with some of the island's most beloved residents. Hold a sloth, watch the monkeys play, and learn a little about the wildlife that calls Roatán home. We'll wrap up the day at West Bay Beach, one of the most beautiful stretches of sand on the island, with time to relax, swim, and soak in the Caribbean before we bring you back. You'll travel in our air-conditioned vehicle throughout the day, with stops timed to give you real time at each place — not rushed, not a checkbox tour.",
+      "Your day starts with pickup and a scenic drive toward the heart of the island. First stop: our zip line course, where you'll soar through the jungle canopy on a series of ziplines with sweeping views of Roatan's coastline below — no experience necessary, we walk you through every step. From there, we head to the Monkey & Sloth Sanctuary, where you'll get up close with some of the island's most beloved residents. Hold a sloth, watch the monkeys play, and learn a little about the wildlife that calls Roatan home. We'll wrap up the day at West Bay Beach, one of the most beautiful stretches of sand on the island, with time to relax, swim, and soak in the Caribbean before we bring you back. You'll travel in our air-conditioned vehicle throughout the day, with stops timed to give you real time at each place — not rushed, not a checkbox tour.",
+    itinerary: [
+      { stop: "Zip Line Adventure", time: "45-65 min" },
+      { stop: "Sloths & Monkeys Hangout", time: "25-35 min" },
+      { stop: "West Bay Beach", time: "1-3 hrs" },
+    ],
   },
-
   {
     id: 4,
     tier: "t2",
@@ -67,6 +87,14 @@ export const packages = [
     tagline: "Reef, wildlife, culture - all in one",
     details:
       "Slip below the waves at the Blue Channel or West Bay, then surface to sloths, monkeys, and a little city sightseeing. Reef, wildlife, and culture, all in one easy day.",
+    fullDescription:
+      "We'll take you snorkeling at the Blue Channel or West Bay, where clear Caribbean waters reveal Roatan's reef up close. From there, we visit the Monkey & Sloth Sanctuary for time with the island's wildlife, followed by a beach break and a bit of city sightseeing. A full day that blends reef, wildlife, and culture in one easy-going tour.",
+    itinerary: [
+      { stop: "Snorkeling (Blue Channel / West Bay)", time: "45-60 min" },
+      { stop: "Monkeys & Sloths Sanctuary", time: "30-40 min" },
+      { stop: "City Tour & Sightseeing", time: "45-60 min" },
+      { stop: "Beach Break", time: "1.5-2 hrs" },
+    ],
     price: 85,
     duration: "~6 hrs",
     tags: ["Water lovers", "Cruise-friendly"],
@@ -84,9 +112,16 @@ export const packages = [
     id: 5,
     tier: "t2",
     name: "Ride the Island",
-    tagline: "Horseback through Roatán's most scenic routes",
+    tagline: "Horseback through Roatan's most scenic routes",
     details:
-      "Horseback along some of Roatán's most scenic trails, then a stop with our sloths and monkeys and a drive through the island's best views. Slow, scenic, and made for families.",
+      "Horseback along some of Roatan's most scenic trails, then a stop with our sloths and monkeys and a drive through the island's best views. Slow, scenic, and made for families.",
+    fullDescription:
+      "Saddle up for a horseback ride along some of Roatan's most scenic trails, taking in views you won't see from the road. Afterward, we stop at the Monkey & Sloth Sanctuary for time with the island's wildlife, followed by a city tour and sightseeing drive. A slower-paced day, perfect for families and anyone who loves the outdoors.",
+    itinerary: [
+      { stop: "Horseback Riding", time: "60-75 min" },
+      { stop: "City Tour & Sightseeing", time: "45-60 min" },
+      { stop: "Monkeys & Sloths Sanctuary", time: "30-40 min" },
+    ],
     price: 95,
     duration: "~6 hrs",
     tags: ["Families", "Cruise-friendly"],
@@ -103,9 +138,18 @@ export const packages = [
     id: 6,
     tier: "t3",
     name: "Sky, Sea & Soul",
-    tagline: "The ultimate Roatán combo",
+    tagline: "The ultimate Roatan combo",
     details:
-      "Zip through the canopy, snorkel the reef, meet our sloths and monkeys, and wind down on the beach — the ultimate Roatán combo for those who want to do it all in one day.",
+      "Zip through the canopy, snorkel the reef, meet our sloths and monkeys, and wind down on the beach — the ultimate Roatan combo for those who want to do it all in one day.",
+    fullDescription:
+      "This is Roatan in one day — start with a zip line ride through the jungle canopy, then cool off snorkeling the reef. From there, we visit the Monkey & Sloth Sanctuary, followed by a city tour and a stop at the beach to relax. Adventure, wildlife, culture, and sand — the ultimate Roatan combo.",
+    itinerary: [
+      { stop: "Zip Line Adventure", time: "45-65 min" },
+      { stop: "Snorkeling", time: "45-60 min" },
+      { stop: "Monkeys & Sloths Sanctuary", time: "30-40 min" },
+      { stop: "City Tour", time: "30-45 min" },
+      { stop: "Beach Break", time: "2-3 hrs" },
+    ],
     price: 110,
     duration: "Full day",
     tags: ["Adventure"],
@@ -127,6 +171,13 @@ export const packages = [
     tagline: "Off-road, wild, and unforgettable",
     details:
       "Off-road through the island's wild side on an ATV adventure, then cool down with sloths and monkeys and a beach break. Dusty, thrilling, and unforgettable.",
+    fullDescription:
+      "Get ready for a dusty, thrilling ride through Roatan's wild side on an ATV adventure through island trails. Afterward, we head to the Monkey & Sloth Sanctuary for time with the island's wildlife, then wind down with a beach break. A full day built for anyone chasing a little adrenaline.",
+    itinerary: [
+      { stop: "ATV Off-Road Adventure", time: "60-90 min" },
+      { stop: "Monkeys & Sloths Sanctuary", time: "30-40 min" },
+      { stop: "Beach Break", time: "2-3 hrs" },
+    ],
     price: 120,
     duration: "Full day",
     tags: ["Thrill-seekers"],
@@ -146,6 +197,13 @@ export const packages = [
     tagline: "800 feet above the Caribbean Sea",
     details:
       "800 feet above the Caribbean, the whole island unfolds beneath you. Followed by West Bay Beach and a bit of city sightseeing, a bucket-list moment, EliTe style.",
+    fullDescription:
+      "Soar 800 feet above the Caribbean on a parasailing adventure, taking in views of the whole island from a perspective few ever see. Afterward, relax at West Bay Beach and enjoy a bit of city sightseeing. A true bucket-list moment, EliTe style.",
+    itinerary: [
+      { stop: "Parasailing Adventure", time: "30-45 min" },
+      { stop: "West Bay Beach", time: "1.5-2 hrs" },
+      { stop: "City Tour", time: "30-45 min" },
+    ],
     price: 120,
     duration: "Half day",
     tags: ["Bucket list"],
@@ -165,6 +223,14 @@ export const packages = [
     tagline: "Ride in, dive in, drift along the mangroves",
     details:
       "Ride in on horseback, drift through the mangrove tunnels, then snorkel the reef and relax on the beach. A full day for anyone who loves the island's wild, quiet corners.",
+    fullDescription:
+      "Ride in on horseback along Roatan's scenic trails, then drift through quiet mangrove tunnels by boat. From there, snorkel the reef before relaxing on the beach. A full day for anyone who loves the island's slower, wilder corners — water, wildlife, and quiet all in one.",
+    itinerary: [
+      { stop: "Horseback Riding", time: "60-75 min" },
+      { stop: "Mangrove Tunnel Cruise", time: "30-45 min" },
+      { stop: "Snorkeling", time: "45-60 min" },
+      { stop: "Beach Break", time: "1.5-2 hrs" },
+    ],
     price: 120,
     duration: "Full day",
     tags: ["Nature lovers"],
@@ -185,6 +251,14 @@ export const packages = [
     tagline: "A private island paradise — Little French Key",
     details:
       "A full day on your own private slice of paradise at Little French Key — exotic animals, warm water, good food, and nowhere else you need to be. This one's for slowing all the way down.",
+    fullDescription:
+      "Spend the day on your own private slice of paradise at Little French Key. Enjoy exotic animal encounters, warm turquoise water, good food, and beach amenities — everything you need for a full day of relaxation, all included in one pass. This one's for slowing all the way down.",
+    itinerary: [
+      { stop: "Little French Key Arrival & Beach Access", time: "2-3 hrs" },
+      { stop: "Exotic Animal Encounters", time: "30-45 min" },
+      { stop: "Water Activities (kayaking & more)", time: "45-60 min" },
+      { stop: "Food & Relaxation Time", time: "1 hr" },
+    ],
     price: 130,
     duration: "Full day",
     tags: ["All-inclusive feel"],
@@ -204,6 +278,11 @@ export const packages = [
     tagline: "All-inclusive luxury on the beach",
     details:
       "A full day of all-inclusive beachfront luxury — food, drinks, and beach amenities included. Just show up, relax, and let the island take care of the rest.",
+    fullDescription:
+      "A full day of all-inclusive beachfront luxury at Infinity Bay — food, drinks, and beach amenities included. Just show up, relax, and let the island take care of the rest. Perfect for anyone looking to unwind without any planning.",
+    itinerary: [
+      { stop: "Infinity Bay All-Inclusive Beach Access", time: "4-5 hrs" },
+    ],
     price: 130,
     duration: "Full day",
     tags: ["Relaxation"],
@@ -223,6 +302,8 @@ export const packages = [
     tagline: "Your island. Your itinerary. Our care.",
     details:
       "This is EliTe at its core — your itinerary, your pace, our care. Whether it's one stop or five, we build the day around you and your group, exactly how family should.",
+    fullDescription:
+      "This is EliTe at its core — your itinerary, your pace, our care. Whether it's one stop or five, we build your day entirely around you and your group in a private air-conditioned van for up to 11, with a dedicated personal guide by your side. Your island, your way.",
     price: 150,
     duration: "Flexible",
     tags: ["Private group"],
@@ -240,9 +321,11 @@ export const packages = [
     id: 13,
     tier: "t4",
     name: "The Family Legacy",
-    tagline: "For families who want to experience Roatán together",
+    tagline: "For families who want to experience Roatan together",
     details:
-      "Built for families who want Roatán together — kid-friendly stops, a pace that works for every age, and photo moments curated just for you. This is how memories are made.",
+      "Built for families who want Roatan together — kid-friendly stops, a pace that works for every age, and photo moments curated just for you. This is how memories are made.",
+    fullDescription:
+      "Built for families who want to experience Roatan together. We'll tailor the day with kid-friendly stops and a pace that works for every age, with a personalized guide and photo stops curated just for your family. This is how memories are made — together, on island time.",
     price: 0,
     duration: "Flexible",
     tags: ["Family-focused", "All ages"],

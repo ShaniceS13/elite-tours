@@ -5,10 +5,12 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./components/Home";
 import TourDetail from "./components/TourDetail";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div>
         <Navbar />
         <Routes>

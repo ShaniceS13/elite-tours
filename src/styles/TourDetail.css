@@ -48,6 +48,12 @@
   border-radius: 2px;
 }
 
+.tour-detail-min {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
 /* - Body - */
 .tour-full-description {
   font-size: 16px;
@@ -56,6 +62,47 @@
   margin-bottom: 40px;
 }
 
+/* - Itinerary Block - */
+.tour-itinerary-block {
+  margin-bottom: 40px;
+}
+
+.tour-itinerary-block h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 16px;
+}
+
+.itinerary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.itinerary-stop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--sand-dark);
+}
+
+.itinerary-stop-label {
+  font-size: 15px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.itinerary-stop-time {
+  font-size: 13px;
+  color: var(--gold);
+  white-space: nowrap;
+  margin-left: 16px;
+}
+
+/* - Includes / Meeting Blocks - */
 .tour-includes-block,
 .tour-meeting-block {
   margin-bottom: 40px;
@@ -107,6 +154,28 @@
 .tour-meeting-block strong {
   color: var(--text-main);
   font-weight: 500;
+}
+
+/* - Safety Block - */
+.tour-safety-block {
+  margin-bottom: 40px;
+  background: var(--sand);
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.tour-safety-block h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 10px;
+}
+
+.tour-safety-block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
 }
 
 /* - Book Button - */

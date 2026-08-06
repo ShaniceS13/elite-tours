@@ -26,14 +26,31 @@ export default function TourDetail() {
         <h1 className="section-title">{pkg.name}</h1>
         <div className="tour-detail-meta">
           <span className="tour-detail-price">
-            {pkg.price > 0 ? `$${pkg.price}pp` : "Quoted"}
+            {pkg.price > 0 ? `$${pkg.price} pp` : "Quoted"}
           </span>
           <span className="tour-detail-duration">{pkg.duration}</span>
+          <span className="tour-detail-min">Min. 2 participants</span>
         </div>
       </div>
 
       <div className="tour-detail-body">
         <p className="tour-full-description">{pkg.fullDescription}</p>
+
+        {pkg.itinerary && (
+          <div className="tour-itinerary-block">
+            <h3>Itinerary</h3>
+            <div className="itinerary-list">
+              {pkg.itinerary.map((stop, i) => (
+                <div key={i} className="itinerary-stop">
+                  <span className="itinerary-stop-label">
+                    Stop {i + 1}: {stop.stop}
+                  </span>
+                  <span className="itinerary-stop-time">{stop.time}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="tour-includes-block">
           <h3>What's Included</h3>
@@ -72,6 +89,17 @@ export default function TourDetail() {
           <p>
             You'll receive your exact meeting details directly from us after
             booking — no guesswork required.
+          </p>
+        </div>
+
+        <div className="tour-safety-block">
+          <h3>Traveling with Young Children?</h3>
+          <p>
+            Children under 5 may not be able to participate in certain
+            activities (zip lining, ATV, horseback riding, snorkeling) due to
+            safety requirements. Please contact us before booking if you're
+            traveling with young children so we can help you choose the right
+            tour.
           </p>
         </div>
 
