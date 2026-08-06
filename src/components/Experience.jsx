@@ -3,6 +3,7 @@ import { packages, tiers } from "../data/packages";
 import { activities } from "../data/activities";
 import useInView from "../hooks/useInView";
 import "../styles/Experiences.css";
+import { Link } from "react-router-dom";
 
 export default function Experiences() {
   const [activeTier, setActiveTier] = useState("t1");
@@ -116,6 +117,10 @@ export default function Experiences() {
               >
                 {expandedCards.includes(pkg.id) ? "Shows Less" : "View More"}
               </button>
+
+              <Link to={`/tours/${pkg.id}`} className="pkg-full-details-link">
+                Full Details →
+              </Link>
 
               <a href="#book" className="pkg-btn">
                 {pkg.tier === "t4" ? "Request a Quote" : "Book This Package"}

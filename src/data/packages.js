@@ -56,6 +56,8 @@ export const packages = [
       "West Bay Beach Break",
       "Round-trip A/C transport",
     ],
+    fullDescription:
+      "Your day starts with pickup and a scenic drive toward the heart of the island. First stop: our zip line course, where you'll soar through the jungle canopy on a series of ziplines with sweeping views of Roatán's coastline below — no experience necessary, we walk you through every step. From there, we head to the Monkey & Sloth Sanctuary, where you'll get up close with some of the island's most beloved residents. Hold a sloth, watch the monkeys play, and learn a little about the wildlife that calls Roatán home. We'll wrap up the day at West Bay Beach, one of the most beautiful stretches of sand on the island, with time to relax, swim, and soak in the Caribbean before we bring you back. You'll travel in our air-conditioned vehicle throughout the day, with stops timed to give you real time at each place — not rushed, not a checkbox tour.",
   },
 
   {

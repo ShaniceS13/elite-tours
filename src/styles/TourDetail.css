@@ -1,0 +1,127 @@
+/* - Tour Detail Page - */
+.tour-detail {
+  padding: 100px 5% 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--teal-light);
+}
+
+/* - Header - */
+.tour-detail-header {
+  margin-bottom: 40px;
+}
+
+.tour-detail-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.tour-detail-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.tour-detail-duration {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1px solid var(--sand-dark);
+  padding: 6px 14px;
+  border-radius: 2px;
+}
+
+/* - Body - */
+.tour-full-description {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.tour-includes-block,
+.tour-meeting-block {
+  margin-bottom: 40px;
+}
+
+.tour-includes-block h3,
+.tour-meeting-block h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 16px;
+}
+
+.tour-includes-block ul,
+.tour-meeting-block ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tour-includes-block li,
+.tour-meeting-block li {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  padding-left: 20px;
+  position: relative;
+}
+
+.tour-includes-block li::before,
+.tour-meeting-block li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 10px;
+  top: 4px;
+}
+
+.tour-meeting-block p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.tour-meeting-block strong {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* - Book Button - */
+.tour-detail-book-btn {
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .tour-detail {
+    padding: 90px 5% 48px;
+  }
+
+  .tour-detail-meta {
+    flex-wrap: wrap;
+  }
+}

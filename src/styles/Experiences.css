@@ -424,6 +424,21 @@
   color: var(--white);
 }
 
+.pkg-full-details-link {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  margin-top: -8px;
+  margin-bottom: 20px;
+  transition: color 0.2s;
+}
+
+.pkg-full-details-link:hover {
+  color: var(--gold-light);
+}
+
 /* - Mobile - */
 @media (max-width: 768px) {
   .experiences {
