@@ -12,6 +12,7 @@ import { useLocation } from "react-router-dom";
 import OurServices from "./OurServices";
 import GivingBack from "./GivingBack";
 import CultureSpotlight from "./CultureSpotlight";
+import FunFacts from "./FunFacts";
 
 export default function Home() {
   const location = useLocation();
@@ -35,6 +36,7 @@ export default function Home() {
       <OurServices />
       <Fleet />
       <CultureSpotlight />
+      <FunFacts />
       <Gallery />
       <BookingForm />
       <CancellationPolicy />
