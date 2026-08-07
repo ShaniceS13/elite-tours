@@ -10,6 +10,7 @@ import CancellationPolicy from "./CancellationPolicy";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import OurServices from "./OurServices";
+import GivingBack from "./GivingBack";
 
 export default function Home() {
   const location = useLocation();
@@ -29,6 +30,7 @@ export default function Home() {
       <About />
       <Mission />
       <WhyELite />
+      <GivingBack />
       <OurServices />
       <Fleet />
       <Gallery />
