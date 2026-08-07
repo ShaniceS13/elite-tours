@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import OurServices from "./OurServices";
 import GivingBack from "./GivingBack";
+import CultureSpotlight from "./CultureSpotlight";
 
 export default function Home() {
   const location = useLocation();
@@ -33,6 +34,7 @@ export default function Home() {
       <GivingBack />
       <OurServices />
       <Fleet />
+      <CultureSpotlight />
       <Gallery />
       <BookingForm />
       <CancellationPolicy />

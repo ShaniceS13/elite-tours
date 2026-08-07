@@ -1,0 +1,46 @@
+/* - Culture Spotlight Section - */
+.culture-spotlight {
+  background: var(--sand);
+  padding: 60px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* - Content - */
+.culture-content p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.culture-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* - Image / Placeholder - */
+.culture-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: rgba(13, 82, 71, 0.06);
+  border: 1px dashed var(--sand-dark);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .culture-spotlight {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 60px 5%;
+  }
+}
