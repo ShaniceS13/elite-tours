@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import TourDetail from "./components/TourDetail";
 import ScrollToTop from "./components/ScrollToTop";
 import FAQPage from "./components/FAQPage";
+import PolicyPage from "./components/PolicyPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="tours/:id" element={<TourDetail />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/policy" element={<PolicyPage />} />
         </Routes>
         <Footer />
         <WhatsAppButton />

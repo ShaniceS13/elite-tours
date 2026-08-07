@@ -38,7 +38,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/#policy" onClick={() => setIsOpen(false)}>
+          <Link to="/policy" onClick={() => setIsOpen(false)}>
             Policy
           </Link>
         </li>

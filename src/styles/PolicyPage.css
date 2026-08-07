@@ -1,0 +1,18 @@
+/* - Policy Page Wrapper - */
+.policy-page {
+  padding-top: 100px;
+}
+
+.policy-back-link {
+  display: inline-block;
+  margin: 0 5% 32px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.policy-back-link:hover {
+  color: var(--teal-light);
+}

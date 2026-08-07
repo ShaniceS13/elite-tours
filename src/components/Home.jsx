@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 import Experiences from "./Experience";
 import BookingForm from "./BookingForm";
 import Mission from "./Mission";
-import CancellationPolicy from "./CancellationPolicy";
+
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import OurServices from "./OurServices";
@@ -39,7 +39,6 @@ export default function Home() {
       <FunFacts />
       <Gallery />
       <BookingForm />
-      <CancellationPolicy />
     </>
   );
 }
