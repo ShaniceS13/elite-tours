@@ -15,7 +15,11 @@ export default function Navbar() {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }}
       >
-        Roatan by Eli<span>Te</span>
+        <img
+          src="/images/full-logo.png"
+          alt="Roatan by EliTe Tours"
+          className="nav-logo-img"
+        />
       </Link>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>

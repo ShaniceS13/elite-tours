@@ -10,20 +10,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 5%;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(212, 160, 23, 0.3);
-}
-
-.navbar::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: url("/images/roatan-sign.jpg");
-  background-size: cover;
-  background-position: center 30%;
-  filter: blur(6px) brightness(0.38) saturate(1.2);
-  transform: scale(1.08);
+  background: var(--ivory);
+  border-bottom: 1px solid var(--sand-dark);
 }
 
 .navbar > * {
@@ -33,16 +21,15 @@
 
 /* ── Logo ── */
 .nav-logo {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 26px;
-  font-weight: 600;
-  color: var(--white);
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-.nav-logo span {
-  color: var(--gold-light);
+.nav-logo-img {
+  height: 78px;
+  width: auto;
+  display: block;
 }
 
 /* ── Nav Links ── */
@@ -58,7 +45,7 @@
   font-weight: 400;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-main);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -97,7 +84,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--white);
+  background: var(--text-main);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
