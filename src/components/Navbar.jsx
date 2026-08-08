@@ -7,7 +7,14 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <Link to="/" className="nav-logo" onClick={() => setIsOpen(false)}>
+      <Link
+        to="/"
+        className="nav-logo"
+        onClick={() => {
+          setIsOpen(false);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }}
+      >
         Roatan by Eli<span>Te</span>
       </Link>
 

@@ -55,7 +55,9 @@ export default function BookingForm() {
           <div className="contact-icon">✉</div>
           <div>
             <span className="contact-label">Email</span>
-            <span className="contact-value">info@roatanbyelite.com</span>
+            <a href="mailto:info@roatanbyelite.com" className="contact-value">
+              info@roatanbyelite.com
+            </a>
           </div>
         </div>
 
