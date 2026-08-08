@@ -8,8 +8,8 @@ export default function GalleryPage() {
 
   return (
     <section className="gallery-page">
-      <Link to="/" className="back-link gallery-page-back">
-        ← Back to Home
+      <Link to="/gallery" className="back-link gallery-page-back">
+        ← Back to Gallery
       </Link>
 
       <span className="section-tag">Gallery</span>

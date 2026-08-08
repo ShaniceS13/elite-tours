@@ -1,0 +1,79 @@
+/* - Local Recommendations Section - */
+.local-recs {
+  background: var(--sand);
+  padding: 60px 5%;
+}
+
+.local-recs-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.local-recs-intro {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* - Grid - */
+.local-recs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* - Card - */
+.local-rec-card {
+  background: var(--white);
+  border: 1px solid var(--sand-dark);
+  border-radius: 2px;
+  padding: 32px 28px;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.local-rec-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.local-rec-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 10px;
+}
+
+.local-rec-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.local-rec-link {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .local-recs {
+    padding: 60px 5%;
+  }
+
+  .local-recs-grid {
+    grid-template-columns: 1fr;
+  }
+}

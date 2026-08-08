@@ -13,6 +13,7 @@ import OurServices from "./OurServices";
 import GivingBack from "./GivingBack";
 import CultureSpotlight from "./CultureSpotlight";
 import FunFacts from "./FunFacts";
+import LocalRecommendations from "./LocalRecommendations";
 
 export default function Home() {
   const location = useLocation();
@@ -39,6 +40,7 @@ export default function Home() {
       <FunFacts />
       <Gallery />
       <BookingForm />
+      <LocalRecommendations />
     </>
   );
 }
