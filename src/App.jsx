@@ -9,6 +9,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import FAQPage from "./components/FAQPage";
 import PolicyPage from "./components/PolicyPage";
 import GalleryPage from "./components/GalleryPage";
+import AllToursPage from "./components/AllToursPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/faq" element={<FAQPage />} />
           <Route path="/policy" element={<PolicyPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/tours" element={<AllToursPage />} />
         </Routes>
         <Footer />
         <WhatsAppButton />

@@ -339,6 +339,76 @@ export const packages = [
       "Photo stops curated for you",
     ],
   },
+  {
+    id: 14,
+    tier: "t2",
+    name: "Beneath the Surface",
+    tagline: "See the reef without getting wet",
+    details:
+      "Watch Roatan's reef come alive beneath a glass-bottom boat, then relax at West Bay Beach.",
+    fullDescription:
+      "Glide over Roatan's vibrant reef in a glass-bottom boat, no snorkel gear required, just clear views of coral and colorful fish below. We'll close out the day with time to relax at West Bay Beach, right where the boat departs from.",
+    itinerary: [
+      { stop: "Glass-Bottom Boat Tour", time: "45-60 min" },
+      { stop: "West Bay Beach", time: "1.5-2 hrs" },
+    ],
+    price: 65,
+    duration: "~4 hrs",
+    tags: ["Family-friendly", "Low activity"],
+    featured: false,
+    featuredLabel: "",
+    includes: [
+      "Glass-Bottom Boat Tour",
+      "West Bay Beach Break",
+      "Round-trip A/C transport",
+    ],
+  },
+  {
+    id: 15,
+    tier: "t2",
+    name: "Heritage & Heart",
+    tagline: "Music, tradition, and the culture of Roatan",
+    details:
+      "Experience the Garifuna community's rich traditions of music, dance, and history, paired with a city tour and a stop at the Chocolate Factory.",
+    fullDescription:
+      "This tour is about the heart of Roatan, its people and traditions. Experience a real Garifuna Cultural Experience, rich with music, dance, and history passed down through generations. From there, take a scenic city tour through the island's highlights, and stop at the Chocolate Factory for a taste of real island flavor. A tour built for anyone who wants to know Roatan beyond the beaches.",
+    itinerary: [
+      { stop: "Garifuna Cultural Experience", time: "45-60 min" },
+      { stop: "City Tour & Sightseeing", time: "45-60 min" },
+      { stop: "Chocolate Factory", time: "15-20 min" },
+    ],
+    price: 50,
+    duration: "~4 hrs",
+    tags: ["Cultural", "Family-friendly"],
+    featured: false,
+    featuredLabel: "",
+    includes: [
+      "Garifuna Cultural Experience",
+      "City Tour & Island Sightseeing",
+      "Chocolate Factory",
+      "Round-trip A/C transport",
+    ],
+  },
+  {
+    id: 21,
+    tier: "t2",
+    name: "Cay & Creatures",
+    tagline: "Iguanas, island time, and Brady's Cay",
+    details:
+      "Get up close with Roatan's iguanas at the Iguana Farm, then unwind on the shores of Brady's Cay.",
+    fullDescription:
+      "Meet the island's fascinating iguanas up close at the Iguana Farm, then head over to Brady's Cay, a quiet, beautiful stretch of Caribbean coastline, for time to relax in the sand and clear water.",
+    itinerary: [
+      { stop: "Iguana Farm", time: "30-40 min" },
+      { stop: "Brady's Cay", time: "2-3 hrs" },
+    ],
+    price: 60,
+    duration: "~4 hrs",
+    tags: ["Family-friendly", "Relaxation"],
+    featured: false,
+    featuredLabel: "",
+    includes: ["Iguana Farm", "Brady's Cay", "Round-trip A/C transport"],
+  },
 ];
 
 export const tiers = [

@@ -74,6 +74,9 @@ export default function Experiences() {
         >
           Build Your Own
         </button>
+        <Link to="/tours" className="tier-tab tier-tab-link">
+          See All Tours
+        </Link>
       </div>
 
       {/* Package Cards */}

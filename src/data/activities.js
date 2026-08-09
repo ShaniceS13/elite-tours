@@ -11,12 +11,7 @@ export const activities = [
   { id: 10, name: "Chocolate & Rum Cake Factory", price: 0 },
   { id: 11, name: "Garifuna Cultural Experience", price: 20 },
   { id: 12, name: "Iguana Farm", price: 15 },
-  { id: 13, name: "Dolphin Encounter", price: 85 },
   { id: 14, name: "Little French Key Day Pass", price: 70 },
   { id: 15, name: "West Bay Beach Break", price: 0 },
   { id: 16, name: "Infinity Bay All-Inclusive Beach", price: 130 },
-  { id: 17, name: "Deep-Sea Fishing Charter", price: 90 },
-  { id: 18, name: "Scuba Diving / Discover Scuba", price: 65 },
-  { id: 19, name: "Catamaran Snorkel Cruise", price: 55 },
-  { id: 20, name: "Roatán Cooking Class", price: 40 },
 ];

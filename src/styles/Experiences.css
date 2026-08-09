@@ -58,6 +58,12 @@
   transform: scale(1.05);
 }
 
+.tier-tab-link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
 /* - Package Grid - */
 .pkg-grid {
   display: grid;

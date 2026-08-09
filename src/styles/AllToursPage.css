@@ -1,0 +1,138 @@
+/* - All Tours Page - */
+.all-tours-page {
+  padding: 100px 5% 60px;
+}
+
+.all-tours-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.all-tours-back:hover {
+  color: var(--teal-light);
+}
+
+.all-tours-page .section-title {
+  margin-bottom: 40px;
+}
+
+/* - Grid - */
+.all-tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* - Card - */
+.all-tours-card {
+  background: var(--sand);
+  border: 1px solid var(--sand-dark);
+  border-radius: 2px;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.all-tours-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.all-tours-card.featured {
+  border-color: var(--gold);
+  background: rgba(212, 160, 23, 0.06);
+}
+
+.all-tours-featured-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(212, 160, 23, 0.12);
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  margin-bottom: 14px;
+  align-self: flex-start;
+}
+
+.all-tours-price {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.all-tours-price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.all-tours-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 4px;
+}
+
+.all-tours-tagline {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.all-tours-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.all-tours-tag {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+  border: 1px solid var(--sand-dark);
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+
+.all-tours-link {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.all-tours-link:hover {
+  color: var(--teal-light);
+}
+
+/* - Mobile - */
+@media (max-width: 768px) {
+  .all-tours-page {
+    padding: 90px 5% 48px;
+  }
+
+  .all-tours-grid {
+    grid-template-columns: 1fr;
+  }
+}
