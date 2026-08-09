@@ -17,18 +17,58 @@
 
 /* - Card - */
 .service-card {
+  position: relative;
   background: var(--sand);
   border: 1px solid var(--sand-dark);
   border-radius: 2px;
   padding: 28px 24px;
+  overflow: hidden;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+
 .service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+/* - Icon - */
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1) rotate(-4deg);
 }
 
 .service-card h3 {

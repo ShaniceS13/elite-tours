@@ -1,17 +1,22 @@
 .mission {
-  background: var(--ivory);
+  background: #f0d9d2;
   padding: 60px 5%;
+  text-align: center;
+}
+
+.mission-inner {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .mission .section-tag {
   display: block;
+  color: #b8776a;
 }
 
 .mission .section-title {
   margin-bottom: 24px;
+  color: var(--text-main);
 }
 
 .mission-text {

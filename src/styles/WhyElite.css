@@ -1,18 +1,64 @@
 /* - Why Section - */
 .why {
   background: var(--sand);
-  padding: 60px 5%;
+  padding: 60px 0;
+  overflow: hidden;
 }
 
-/* - Grid - */
-.why-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.why .section-tag,
+.why .section-title {
+  padding: 0 5%;
+}
+
+/* - Ticker wrap: masks the hard edges so cards fade in/out instead of clipping - */
+.why-ticker-wrap {
+  margin-top: 40px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 8%,
+    #000 92%,
+    transparent 100%
+  );
+}
+
+.why-ticker-track {
+  display: flex;
+  width: max-content;
   gap: 40px;
-  margin-top: 32px;
+  padding: 4px 0;
+  animation: why-scroll 50s linear infinite;
 }
 
-/* - Item - */
+/* pause on hover/focus so people can actually read a card */
+.why-ticker-wrap:hover .why-ticker-track,
+.why-ticker-track:focus-within {
+  animation-play-state: paused;
+}
+
+@keyframes why-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* - Card - */
+.why-card {
+  flex: 0 0 auto;
+  width: 260px;
+}
+
 .why-num {
   font-family: "Cormorant Garamond", serif;
   font-size: 52px;
@@ -22,7 +68,7 @@
   margin-bottom: 12px;
 }
 
-.why-item h4 {
+.why-card h4 {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   font-weight: 600;
@@ -30,27 +76,23 @@
   margin-bottom: 10px;
 }
 
-.why-item p {
+.why-card p {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.7;
 }
 
-/* - Mobile - */
-@media (max-width: 768px) {
-  .why {
-    padding: 60px 5%;
-  }
-  .why-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
+/* - Respect reduced motion: fall back to a scrollable strip, no auto-motion - */
+@media (prefers-reduced-motion: reduce) {
+  .why-ticker-track {
+    animation: none;
+    overflow-x: auto;
   }
 }
 
+/* - Mobile - */
 @media (max-width: 480px) {
-  .why-grid {
-    grid-template-columns: 1fr;
-    margin-top: 24px;
-    gap: 28px;
+  .why-card {
+    width: 220px;
   }
 }

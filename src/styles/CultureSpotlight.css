@@ -1,6 +1,6 @@
 /* - Culture Spotlight Section - */
 .culture-spotlight {
-  background: var(--sand);
+  background: #a13d63;
   padding: 60px 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8,11 +8,19 @@
   align-items: center;
 }
 
+.culture-spotlight .section-tag {
+  color: var(--gold-light);
+}
+
+.culture-spotlight .section-title {
+  color: var(--white);
+}
+
 /* - Content - */
 .culture-content p {
   font-size: 16px;
   line-height: 1.85;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 20px;
 }
 
@@ -24,16 +32,17 @@
 .culture-placeholder {
   width: 100%;
   aspect-ratio: 4/3;
-  background: rgba(13, 82, 71, 0.06);
-  border: 1px dashed var(--sand-dark);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px dashed rgba(255, 255, 255, 0.35);
   border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  max-height: 420px;
 }
 
 /* - Mobile - */

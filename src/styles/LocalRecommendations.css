@@ -1,6 +1,6 @@
 /* - Local Recommendations Section - */
 .local-recs {
-  background: var(--sand);
+  background: var(--gold);
   padding: 60px 5%;
 }
 
@@ -10,9 +10,17 @@
   text-align: center;
 }
 
+.local-recs .section-tag {
+  color: var(--white);
+}
+
+.local-recs .section-title {
+  color: var(--white);
+}
+
 .local-recs-intro {
   font-size: 16px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 40px;
 }
 
@@ -40,7 +48,7 @@
 
 .local-rec-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
 .local-rec-card h3 {

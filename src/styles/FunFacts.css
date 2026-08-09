@@ -1,76 +1,197 @@
 /* - Fun Facts Section - */
 .fun-facts {
   background: var(--ivory);
-  padding: 60px 5%;
+  padding: 48px 5%;
+  text-align: center;
 }
 
 .fun-facts .section-title {
-  margin-bottom: 48px;
+  margin-bottom: 32px;
 }
 
-/* - Grid - */
-.fun-facts-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-/* - Card - */
-.fun-fact-card {
-  background: var(--teal-deep);
-  padding: 32px 28px;
-  border-radius: 2px;
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease;
+/* - Carousel - */
+.fun-facts-carousel {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.fun-facts-viewport {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: 320px;
   overflow: hidden;
 }
 
-.fun-fact-card:nth-child(3n + 2) {
-  background: var(--gold);
+.fun-facts-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-.fun-fact-card:nth-child(3n) {
-  background: var(--teal);
+.fun-fact-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  padding: 40px 36px;
+  border-radius: 6px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease,
+    filter 0.5s ease;
 }
 
-.fun-fact-card:hover {
-  transform: translateY(-6px) rotate(-1deg);
+.fun-fact-card--active {
+  transform: translate(-50%, -50%) translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+  filter: none;
 }
 
-.fun-fact-number {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.25);
-  line-height: 1;
-  display: block;
-  margin-bottom: 12px;
+.fun-fact-card--prev {
+  transform: translate(-50%, -50%) translateX(-360px) scale(0.82);
+  opacity: 0.5;
+  z-index: 2;
+  filter: saturate(0.7) brightness(0.92);
+}
+
+.fun-fact-card--next {
+  transform: translate(-50%, -50%) translateX(360px) scale(0.82);
+  opacity: 0.5;
+  z-index: 2;
+  filter: saturate(0.7) brightness(0.92);
+}
+
+/* - Eclectic palette: one distinct color family per card - */
+.card-coral {
+  background: #e2694f;
+}
+
+.card-marigold {
+  background: #e8a33d;
+}
+
+.card-aqua {
+  background: #3fb5a3;
+}
+
+.card-plum {
+  background: #7d5ba6;
+}
+
+.card-denim {
+  background: #3f72af;
+}
+
+.card-rose {
+  background: #d1638c;
+}
+
+.card-olive {
+  background: #6b8e4e;
 }
 
 .fun-fact-card p {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 17px;
+  line-height: 1.75;
   color: var(--white);
   position: relative;
   z-index: 1;
 }
 
+/* - Arrows - */
+.carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: var(--teal-deep);
+  color: var(--white);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  z-index: 4;
+}
+
+.carousel-arrow:hover {
+  background: var(--teal);
+}
+
+/* - Dots - */
+.fun-facts-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.fun-facts-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--sand-dark);
+  cursor: pointer;
+  padding: 0;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.fun-facts-dot.active {
+  background: var(--gold);
+  transform: scale(1.3);
+}
+
 /* - Mobile - */
 @media (max-width: 768px) {
-  .fun-facts {
-    padding: 60px 5%;
+  .fun-facts-viewport {
+    max-width: 100%;
+    height: 260px;
   }
 
-  .fun-facts-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+  .fun-fact-card {
+    width: 240px;
+  }
+
+  .fun-fact-card--prev {
+    transform: translate(-50%, -50%) translateX(-190px) scale(0.8);
+  }
+
+  .fun-fact-card--next {
+    transform: translate(-50%, -50%) translateX(190px) scale(0.8);
+  }
+
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .fun-facts-grid {
-    grid-template-columns: 1fr;
+  .fun-facts-carousel {
+    gap: 8px;
+  }
+
+  .fun-fact-card--prev,
+  .fun-fact-card--next {
+    display: none;
+  }
+
+  .fun-fact-card {
+    width: 90%;
+    max-width: 320px;
   }
 }

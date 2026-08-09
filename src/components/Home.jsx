@@ -14,6 +14,8 @@ import GivingBack from "./GivingBack";
 import CultureSpotlight from "./CultureSpotlight";
 import FunFacts from "./FunFacts";
 import LocalRecommendations from "./LocalRecommendations";
+import WaveDivider from "./WaveDivider";
+import RippedDivider from "./RippedDivider";
 
 export default function Home() {
   const location = useLocation();
@@ -33,13 +35,20 @@ export default function Home() {
       <About />
       <Mission />
       <WhyELite />
+
       <GivingBack />
+      <WaveDivider topColor="#0d5247" bottomColor="#fdfaf4" />
       <OurServices />
+      <WaveDivider topColor="#fdfaf4" bottomColor="#0d5247" />
       <Fleet />
+      <RippedDivider topColor="#0d5247" bottomColor="#a13d63" />
+      <WaveDivider topColor="#0d5247" bottomColor="#f5f0e8" />
       <CultureSpotlight />
+      <RippedDivider topColor="#a13d63" bottomColor="#fdfaf4" />
       <FunFacts />
       <Gallery />
       <BookingForm />
+      <WaveDivider topColor="#fdfaf4" bottomColor="#b8860b" />
       <LocalRecommendations />
     </>
   );
