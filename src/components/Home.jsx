@@ -41,10 +41,10 @@ export default function Home() {
       <OurServices />
       <WaveDivider topColor="#fdfaf4" bottomColor="#0d5247" />
       <Fleet />
-      <RippedDivider topColor="#0d5247" bottomColor="#a13d63" />
+
       <WaveDivider topColor="#0d5247" bottomColor="#f5f0e8" />
       <CultureSpotlight />
-      <RippedDivider topColor="#a13d63" bottomColor="#fdfaf4" />
+
       <FunFacts />
       <Gallery />
       <BookingForm />
