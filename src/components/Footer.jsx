@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={`footer-top fade-in ${inView ? "visible" : ""}`}>
         <div className="footer-brand">
           <span className="footer-logo">
-            Roatan by Eli<span>Te</span>
+            Roatan by Eli<span>Te</span> <span>Tours</span>
           </span>
           <p>
             A family-owned tour company rooted in the beauty of Roatan and built
@@ -59,7 +59,9 @@ export default function Footer() {
         </div>
       </div>
       <div className={`footer-bottom fade-in ${inView ? "visible" : ""}`}>
-        <p>© 2026 Roatan by EliTe · Roatán, Honduras · All rights reserved</p>
+        <p>
+          © 2026 Roatan by EliTe Tours · Roatán, Honduras · All rights reserved
+        </p>
         <span className="footer-memorial">For Eli & Tete, always</span>
       </div>
     </footer>
