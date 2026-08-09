@@ -43,6 +43,7 @@ export default function Home() {
       <Fleet />
 
       <WaveDivider topColor="#0d5247" bottomColor="#f5f0e8" />
+
       <CultureSpotlight />
 
       <FunFacts />
