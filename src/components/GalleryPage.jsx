@@ -8,7 +8,7 @@ export default function GalleryPage() {
 
   return (
     <section className="gallery-page">
-      <Link to="/gallery" className="back-link gallery-page-back">
+      <Link to="/#gallery" className="back-link gallery-page-back">
         ← Back to Gallery
       </Link>
 
