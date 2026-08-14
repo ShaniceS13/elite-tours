@@ -41,14 +41,16 @@ export default function Footer() {
               <a href="#book">Book a Tour</a>
             </li>
             <li>
-              <a href="mailto:info@roatanbyelite.com">info@roatanbyelite.com</a>
+              <a href="mailto:info@roatanbyelitetours.com">
+                info@roatanbyelitetours.com
+              </a>
             </li>
             <li>
               <a href="#">Instagram</a>
             </li>
             <li>
               <a
-                href="https://wa.me/50412345678"
+                href="https://wa.me/50433877147"
                 target="_blank"
                 rel="noreferrer"
               >
