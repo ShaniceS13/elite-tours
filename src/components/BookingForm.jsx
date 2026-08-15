@@ -38,7 +38,9 @@ export default function BookingForm() {
   const pricePerPerson = selectedPackage ? selectedPackage.price : 0;
   const totalPrice = pricePerPerson * groupSize;
   const depositAmount = totalPrice * 0.25;
-  const amountDue = paymentType === "deposit" ? depositAmount : totalPrice;
+  const amountDue = Math.round(
+    paymentType === "deposit" ? depositAmount : totalPrice,
+  );
 
   return (
     <section className="book" id="book" ref={ref}>
@@ -153,7 +155,7 @@ export default function BookingForm() {
                       ? "Deposit Due Now"
                       : "Full Payment Due"}
                   </span>
-                  <strong>${amountDue.toFixed(2)}</strong>
+                  <strong>${amountDue}</strong>
                 </div>
               </div>
 
@@ -164,11 +166,7 @@ export default function BookingForm() {
               </p>
 
               <input type="hidden" name="paymentType" value={paymentType} />
-              <input
-                type="hidden"
-                name="amountDue"
-                value={amountDue.toFixed(2)}
-              />
+              <input type="hidden" name="amountDue" value={amountDue} />
             </div>
           )}
           {selectedPackage && pricePerPerson === 0 && (
