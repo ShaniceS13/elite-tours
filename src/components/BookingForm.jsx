@@ -4,8 +4,6 @@ import { packages, tiers } from "../data/packages";
 
 import "../styles/BookingForm.css";
 
-const PAYPAL_PAYMENT_LINK = "https://www.paypal.com/ncp/payment/VCG934EN2RFWQ";
-
 export default function BookingForm() {
   const [status, setStatus] = useState("");
   const [groupSize, setGroupSize] = useState(1);
@@ -59,6 +57,7 @@ export default function BookingForm() {
           <div className="contact-icon">✉</div>
           <div>
             <span className="contact-label">Email</span>
+
             <a
               href="mailto:info@roatanbyelitetours.com"
               className="contact-value"
@@ -109,11 +108,21 @@ export default function BookingForm() {
           <div className="form-row">
             <div className="form-group">
               <label>First Name</label>
-              <input type="text" name="firstName" placeholder="Maria" />
+              <input
+                type="text"
+                name="firstName"
+                placeholder="Maria"
+                required
+              />
             </div>
             <div className="form-group">
               <label>Last Name</label>
-              <input type="text" name="lastName" placeholder="Johnson" />
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Johnson"
+                required
+              />
             </div>
           </div>
           {selectedPackage && pricePerPerson > 0 && (
@@ -153,17 +162,9 @@ export default function BookingForm() {
                 </div>
               </div>
 
-              <a
-                href={PAYPAL_PAYMENT_LINK}
-                target="_blank"
-                rel="noreferrer"
-                className="paypal-link-btn"
-              >
-                Pay ${amountDue.toFixed(2)} via PayPal
-              </a>
-              <p className="paypal-link-note">
-                You'll be taken to PayPal to enter this exact amount and
-                complete payment securely.
+              <p className="quoted-note">
+                We'll send you a PayPal invoice for this exact amount once we
+                confirm your booking details.
               </p>
 
               <input type="hidden" name="paymentType" value={paymentType} />
@@ -184,7 +185,12 @@ export default function BookingForm() {
           )}
           <div className="form-group">
             <label>Email Address</label>
-            <input type="text" name="email" placeholder="maria@email.com" />
+            <input
+              type="email"
+              name="email"
+              placeholder="maria@email.com"
+              required
+            />
           </div>
           <div className="form-row">
             <div className="form-group">

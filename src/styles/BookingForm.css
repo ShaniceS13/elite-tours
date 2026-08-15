@@ -205,30 +205,6 @@
   color: var(--teal);
 }
 
-.paypal-link-btn {
-  display: block;
-  text-align: center;
-  background: #ffc439;
-  color: #2c1f14;
-  font-weight: 600;
-  padding: 12px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  margin-top: 16px;
-  transition: background 0.2s;
-}
-
-.paypal-link-btn:hover {
-  background: #f0b429;
-}
-
-.paypal-link-note {
-  font-size: 12px;
-  color: var(--text-muted);
-  margin-top: 8px;
-  text-align: center;
-}
-
 .quoted-note {
   font-size: 14px;
   color: var(--text-muted);
