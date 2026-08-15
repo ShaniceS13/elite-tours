@@ -10,7 +10,7 @@ const reasons = [
   {
     number: "02",
     title: "Island Roots",
-    text: "We are from Roatán. We know this island, its hidden beaches, its real stories, its people.",
+    text: "We are from Roatan. We know this island, its hidden beaches, its real stories, its people.",
   },
   {
     number: "03",

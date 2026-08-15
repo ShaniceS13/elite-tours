@@ -46,7 +46,7 @@ export default function BookingForm() {
           Ready to See <br /> the Island?
         </h2>
         <p>
-          Reach out and let us start planning your perfect Roatán experience.
+          Reach out and let us start planning your perfect Roatan experience.
           Whether you're arriving by cruise ship, staying at a resort, or
           visiting family, we'll take care of everything.
         </p>
@@ -56,7 +56,7 @@ export default function BookingForm() {
           <div>
             <span className="contact-label">Email</span>
             <a href="mailto:info@roatanbyelite.com" className="contact-value">
-              info@roatanbyelite.com
+              info@roatanbyelitetours.com
             </a>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function BookingForm() {
           <div className="contact-icon">📍</div>
           <div>
             <span className="contact-label">Location</span>
-            <span className="contact-value">Roatán, Bay Islands, Honduras</span>
+            <span className="contact-value">Roatan, Bay Islands, Honduras</span>
           </div>
         </div>
 

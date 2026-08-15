@@ -29,7 +29,7 @@ export default function Hero() {
         </h1>
         <p className="hero-sub">
           Private, luxury tour experiences rooted in family, faith, and the
-          beauty of Roatán, crafted for those who want to see the island the way
+          beauty of Roatan, crafted for those who want to see the island the way
           it was meant to be seen
         </p>
         <div className="hero-btns">

@@ -20,6 +20,9 @@ export default function Navbar() {
           alt="Roatan by EliTe Tours"
           className="nav-logo-img"
         />
+        <span className="nav-logo-text">
+          Roatan by Eli<span>Te</span> <span>Tours</span>
+        </span>
       </Link>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>

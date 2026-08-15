@@ -62,7 +62,7 @@ export default function Footer() {
       </div>
       <div className={`footer-bottom fade-in ${inView ? "visible" : ""}`}>
         <p>
-          © 2026 Roatan by EliTe Tours · Roatán, Honduras · All rights reserved
+          © 2026 Roatan by EliTe Tours · Roatan, Honduras · All rights reserved
         </p>
         <span className="footer-memorial">For Eli & Tete, always</span>
       </div>

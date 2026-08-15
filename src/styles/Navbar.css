@@ -32,6 +32,19 @@
   display: block;
 }
 
+.nav-logo-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.nav-logo-text span {
+  color: var(--gold-light);
+}
+
 /* ── Nav Links ── */
 .nav-links {
   display: flex;
@@ -110,16 +123,28 @@
   .nav-links a {
     font-size: 11px;
   }
+
+  .nav-logo-text {
+    display: none;
+  }
 }
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+
   .nav-logo {
     font-size: 22px;
   }
 
   .hamburger {
     display: flex;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .nav-links {
