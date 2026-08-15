@@ -15,18 +15,20 @@ export default function BookingForm() {
     const form = e.target;
     const data = new FormData(form);
 
-    const response = await fetch("https://formspree.io/f/mlgvedbn", {
-      method: "POST",
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    });
+    try {
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
 
-    if (response.ok) {
-      setStatus("success");
-      form.reset();
-    } else {
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
       setStatus("error");
     }
   };
@@ -87,7 +89,19 @@ export default function BookingForm() {
       </div>
 
       <div className={`book-right fade-in ${inView ? "visible" : ""}`}>
-        <form className="book-form" onSubmit={handleSubmit}>
+        <form
+          className="book-form"
+          onSubmit={handleSubmit}
+          name="booking-inquiry"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <input type="hidden" name="form-name" value="booking-inquiry" />
+          <p style={{ display: "none" }}>
+            <label>
+              Don't fill this out if you're human: <input name="bot-field" />
+            </label>
+          </p>
           <div className="form-row">
             <div className="form-group">
               <label>First Name</label>
