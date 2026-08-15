@@ -117,12 +117,7 @@ export default function BookingForm() {
             </div>
             <div className="form-group">
               <label>Last Name</label>
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Johnson"
-                required
-              />
+              <input type="text" name="lastName" placeholder="Johnson" />
             </div>
           </div>
           {selectedPackage && pricePerPerson > 0 && (
@@ -164,7 +159,8 @@ export default function BookingForm() {
 
               <p className="quoted-note">
                 We'll send you a PayPal invoice for this exact amount once we
-                confirm your booking details.
+                confirm your booking details. Your spot is officially reserved
+                once payment is received.
               </p>
 
               <input type="hidden" name="paymentType" value={paymentType} />
@@ -259,7 +255,8 @@ export default function BookingForm() {
 
           {status === "success" && (
             <p className="form-success">
-              Thank you!! We'll be in touch shortly to confirm your booking!
+              Thank you!! We'll be in touch shortly with a PayPal invoice — your
+              spot is officially reserved once payment is received.
             </p>
           )}
 
