@@ -1,8 +1,12 @@
 import useInView from "../hooks/useInView";
 import { useState } from "react";
 import { packages, tiers } from "../data/packages";
-
+import emailjs from "@emailjs/browser";
 import "../styles/BookingForm.css";
+
+const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
 
 export default function BookingForm() {
   const [status, setStatus] = useState("");
@@ -23,6 +27,26 @@ export default function BookingForm() {
       });
 
       if (response.ok) {
+        try {
+          await emailjs.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            {
+              customer_name: `${data.get("firstName")} ${data.get("lastName")}`,
+              customer_email: data.get("email"),
+              tour_name: data.get("tourType"),
+              group_size: data.get("groupSize"),
+              tour_date: data.get("date") || "Not specified",
+              message: data.get("message") || "No additional notes",
+              payment_type: data.get("paymentType") || "N/A",
+              amount_due: data.get("amountDue") || "N/A",
+            },
+            EMAILJS_PUBLIC_KEY,
+          );
+        } catch (emailError) {
+          console.error("Confirmation email failed to send:", emailError);
+        }
+
         setStatus("success");
         form.reset();
       } else {
