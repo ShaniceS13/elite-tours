@@ -25,7 +25,14 @@ export default function CultureSpotlight() {
       </div>
 
       <div className={`culture-img fade-in ${inView ? "visible" : ""}`}>
-        <div className="culture-placeholder">Photo/Video Coming Soon</div>
+        <div className="culture-video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/PGNr1CKp9bE?start=7"
+            title="Roatan Culture & Island Life"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </section>
   );
