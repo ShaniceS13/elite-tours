@@ -1,13 +1,23 @@
 import useInView from "../hooks/useInView";
+import ImageSlideshow from "./ImageSlideshow";
 import "../styles/GivingBack.css";
 
 export default function GivingBack() {
   const [ref, inView] = useInView();
 
+  const givingBackImages = [
+    "/images/giving-back-1.jpg",
+    "/images/giving-back-2.jpg",
+  ];
+
   return (
     <section className="giving-back" id="giving-back" ref={ref}>
       <div className={`giving-back-img fade-in ${inView ? "visible" : ""}`}>
-        <div className="giving-back-placeholder">Photo Coming Soon</div>
+        <ImageSlideshow
+          images={givingBackImages}
+          altPrefix="EliTe Tours giving back in the Roatan community"
+          interval={6000}
+        />
       </div>
 
       <div className={`giving-back-content fade-in ${inView ? "visible" : ""}`}>

@@ -8,24 +8,16 @@
   align-items: center;
 }
 
-/* - Image / Placeholder - */
+/* - Image  - */
 .giving-back-img {
   width: 100%;
 }
 
-.giving-back-placeholder {
+.giving-back-img {
   width: 100%;
   aspect-ratio: 4/3;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px dashed rgba(255, 255, 255, 0.25);
   border-radius: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  overflow: hidden;
 }
 
 /* - Content - */
