@@ -4,9 +4,9 @@ import { packages, tiers } from "../data/packages";
 import emailjs from "@emailjs/browser";
 import "../styles/BookingForm.css";
 
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_SERVICE_ID = "service_th8debf";
+const EMAILJS_TEMPLATE_ID = "template_23feqdc";
+const EMAILJS_PUBLIC_KEY = "vwamDBRUwjeEIwZN_";
 
 export default function BookingForm() {
   const [status, setStatus] = useState("");
