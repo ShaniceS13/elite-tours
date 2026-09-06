@@ -10,16 +10,13 @@ export default function LocalRecommendations() {
         <span className="section-tag">While You're Here</span>
         <h2 className="section-title">Local Recommendations</h2>
         <p className="local-recs-intro">
-          A few local favorites we personally trust:
+          Extending your stay in Roatan? Let our Island Concierge help — mention
+          any of these local favorites and we'll help arrange your visit,
+          transport and all.
         </p>
 
         <div className="local-recs-grid">
-          <a
-            href="https://roataninsiderconcerge.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="local-rec-card"
-          >
+          <div className="local-rec-card">
             <h3>The Roatan Insider</h3>
             <p>
               Looking for private charters, curated excursions, or help planning
@@ -27,22 +24,17 @@ export default function LocalRecommendations() {
               charters, off-the-beaten-path experiences, and island
               accommodations.
             </p>
-            <span className="local-rec-link">Visit Site →</span>
-          </a>
+            <span className="local-rec-link">Ask us to arrange it!</span>
+          </div>
 
-          <a
-            href="https://thesexymermaidroatan.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="local-rec-card"
-          >
+          <div className="local-rec-card">
             <h3>A&S Restaurant (The Sexy Mermaid)</h3>
             <p>
               Craving fresh, local Caribbean flavor after your tour? This is one
               of our favorite spots on the island for great food and good vibes.
             </p>
-            <span className="local-rec-link">Visit Site →</span>
-          </a>
+            <span className="local-rec-link">Ask us to arrange it!</span>
+          </div>
         </div>
       </div>
     </section>
