@@ -19,10 +19,9 @@ export default function LocalRecommendations() {
           <div className="local-rec-card">
             <h3>The Roatan Insider</h3>
             <p>
-              Looking for private charters, curated excursions, or help planning
-              the rest of your trip? A concierge service offering private boat
-              charters, off-the-beaten-path experiences, and island
-              accommodations.
+              Extending your Roatan trip and need help planning the rest of your
+              trip? A concierge service offering private boat charters,
+              off-the-beaten-path experiences, and island accommodations.
             </p>
             <span className="local-rec-link">Ask us to arrange it!</span>
           </div>
